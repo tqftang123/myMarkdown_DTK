@@ -1,0 +1,285 @@
+1、负责腾讯地图引擎的功能开发，架构和性能优化；
+2、负责向C端和B端用户交付高质量的引擎； 
+3、根据产品及开发需求完成高质量的编码和测试工作，编写清晰的设计及接口文档，积极推动所负责业务模块的性能优化及需求落地；
+1.参与系统的需求分析、架构设计、模块编码等研发工作
+2.参与现有仿真核心引擎相关架构的迭代优化，保证系统稳定高效运行
+3.配合支持仿真核心引擎上云的相关开发优化工作
+1.参与系统的需求分析、架构设计、模块编码等研发工作
+2.参与现有仿真核心引擎相关架构的迭代优化，保证系统稳定高效运行
+3.配合支持仿真核心引擎上云的相关开发优化工作
+1. 负责腾讯会议Windows客户端研发、技术研究和维护;
+2. 负责腾讯会议 C++ 跨平台框架的开发和维护;
+3. 负责腾讯会议 C++ 跨平台框架架构设计.
+负责IP世界观架构和剧情构建；
+开放世界地理、环境、人文、怪物、POI等设定，与美术协作进行概念落地；
+开放世界环境叙事与事件、玩法的叙事设计；
+剧情任务制作落地与工具链维护；
+为各种玩法、系统的包装提供世界观支持。
+
+岗位职责：
+  1. 负责腾讯会议 C++ 跨平台的开发和维护；
+  2. 负责腾讯会议平台效率工具建设。
+岗位职责：
+  1. 负责腾讯会议 C++ 跨平台的开发和维护；
+  2. 负责腾讯会议平台效率工具建设。
+-Evaluate and design massively scalable game back-end services and assist in developing the project architecture;
+-Evaluate and design periphery back-end services and assist in developing the project architecture. Singapore-CapitalSpring | Singapore-WeWork
+1. Design and build NLP algorithms for semantic analysis, intent recognition, chatbot, machine translation, knowledge graph, named-entity recognition.
+2. Conduct research to advance the state of the art in NLP and create technical solutions at scale to real world challenges in various application scenarios.
+3. Design and build NLP algorithms for semantic analysis, intent recognition, chatbot, machine translation, knowledge graph, named-entity recognition. Singapore-CapitalSpring | Singapore-WeWork
+Ability to organize and manage the team to accomplish quality goals;
+Recruit and build the testing team, improve team building and development, and achieve good cross-team cooperation;
+Optimize and improve testing efficiency, analyze test data and results to identify patterns and influence game quality;
+Work with the quality control team and external partners to test content quality and integration;
+Take on the responsibility of ensuring quality in our products and game operations;
+Focus on improving the team's overall performance. Singapore-CapitalSpring | Singapore-WeWork
+Develop algorithms to improve VR/360 video and other high dimensional data content delivery efficiency.
+Develop projects, plugin, demos and SDKs.
+Analyze performance, and tuning algorithms for streaming media playback US-California-Remote | US-Palo Alto
+负责预研游戏项目后台部分架构设计； 
+负责预研游戏项目后台逻辑系统的设计及编码；
+与前台开发以及策划设计人员进行良好的沟通，高效的与前台开发合作设计编码和调试； 
+熟练和冷静的应对运营中的突发事件，严格按照流程处理事务。
+负责TPS游戏Unreal 4引擎框架设计与业务需求的开发；
+负责游戏开发相关工具链支持；
+负责客户端性能优化及TPS游戏体验优化。
+
+ US-California-Remote | US-Palo Alto
+Responsibilities
+
+As an Open World Technical Designer at Lightspeed LA, you will be the liaison between the World Design and Engineering teams. You will be working with multi-disciplinary teams to optimize designer workflow, processes, and content pipeline.  You will engage in complex technical areas such as AI, physics, animation, UI, and data management.  As part of the Design team, you will be the go-to person for the implementation of complex scripted content that stretches the capability of open world systems and breathes life into the ambient world US-Irvine
+Responsibilities
+
+As an Open World Technical Designer at Lightspeed LA, you will be the liaison between the World Design and Engineering teams. You will be working with multi-disciplinary teams to optimize designer workflow, processes, and content pipeline.  You will engage in complex technical areas such as AI, physics, animation, UI, and data management.  As part of the Design team, you will be the go-to person for the implementation of complex scripted content that stretches the capability of open world systems and breathes life into the ambient world US-Irvine
+Define technical design and architecture for new automation solutions, actively implement automation features and develop high-quality code;
+Work with R&D teams and keep improving games modules compatibility testing, client/server performance testing, etc., to provide our players with a better experience;
+Help to drive continuous process improvements for the QA department and the project team;
+Work in a fast-paced environment that requires a frequent shift in areas of focus. Singapore-CapitalSpring | Singapore-WeWork
+Define technical design and architecture for new automation solutions, actively implement automation features and develop high-quality code;
+Work with R&D teams and keep improving games modules compatibility testing, client/server performance testing, etc., to provide our players with a better experience;
+Help to drive continuous process improvements for the QA department and the project team;
+Work in a fast-paced environment that requires a frequent shift in areas of focus.
+Evaluate and design massively scalable game back-end services and develop the project architecture;
+Evaluate and design periphery back-end services and develop the project architecture.
+负责为开发游戏引擎中的图形、动画技术；
+负责与美术和技术美术讨论需求，共同合作提升游戏品质；
+负责优化图形、动画及相关引擎模块的性能。
+Responsible for developing graphics/animation technologies in game engine;
+Responsible for discussing requirements with artists and technical artists, and improving product quality via collaboration;
+Responsible for optimizing performance of graphics, animation and related engine modules.
+负责移动游戏产品的测试工作，保障项目顺利发布；
+优化、提高团队与项目组之间的良好沟通渠道，以及测试效率和输出质量。
+About Tencent
+Tencent is an Internet-based platform company founded in Shenzhen, China, in 1998. We use technology to enrich the lives of Internet users and assist the digital upgrade of enterprises. Our mission is "Value for Users, Tech for Good". We embrace a culture of teamwork & creativity and are driven by our values - Integrity, Proactivity, Collaboration and Creativity.
+
+We are rapidly expanding our international operations and are looking for top talent to propel us forward. Combining the results-oriented nature of a start-up with the resources of a profitable and leading Internet company, Tencent offers a unique opportunity for aspiring individuals to thrive.
+
+About WeChat
+With over 1.2 billion users worldwide, WeChat is changing the mobile landscape by connecting people, services, and businesses in China and around-the world. The WeChat team in Singapore is responsible for managing and growing our core product including messaging and social networking for users around the world.
+
+Join the WeChat team and play an impactful role in keeping people around the world connected, help redefine how people use their mobile devices to communicate and interact online and to better understand user behaviour and preferences of users worldwide.
+
+Roles & Responsibilities
+•	To look into both qualitative and quantitative data sets, perform analysis to derive problems and to build solutions through the use of machine learning and deep learning approaches
+•	Collect large sets of structured and unstructured data from independent sources, cleaning and validating the data to ensure accuracy, completeness, and uniformity	
+•	Analyzing the data to identify patterns or trends via Machine Learning, Deep Learning models to look for actionable insights, potential opportunities and/or threats to WeChat ecosystem
+•	Interpreting the data to discover solutions or opportunities and building a story-board to communicate such insights to the business for actions
+
+负责王者荣耀moba核心战斗系统； 
+在技术框架下，实现英雄技能新特性以及关卡玩法新机制； 
+完善开发管线，实现快速迭代及验证制作内容； 
+负责局内性能，crash等问题的定位，针对各平台存在的帧率，内存问题进行优化；
+1、负责移动游戏产品的测试工作，包括功能、性能、自动化、代码质量等维度；
+2、负责项目/模块的测试计划排期和测试任务跟踪执行，及时提出风险项和确保所负责项目/模块的质量；
+3、负责项目/模块的测试流程优化、测试效率优化、外网质量改进等；
+4、针对测试行为中的难点和盲区提出新的测试方案，引入或开发新的测试方法和测试工具； 
+
+Implement and improve a variety of fast and efficient core software using Unreal Engine 5;
+Maintain and build code using C++ for all assigned work streams;
+Help provide architectural oversight across the entire application;
+Collaborate to devise optimal engineering solutions to technical challenges.
+负责语音合成相关算法的研发工作，快速应用到业务中；
+追踪语音合成方向的前沿研究，改进现有方法，撰写论文专利；
+研究，设计，实施，评估和优化新颖的算法/模型，从而提高实际场景中的性能。
+Responsible for TTS algorithms and other research and development work，quickly apply them to business;
+Follow the latest developments in academia and improve existing methods and publish papers;
+Research, design, implement, evaluate and optimize novel algorithms/models that lead to improved performance in real world scenarios.
+负责服务器端的架构工作；
+负责游戏服务器端功能需求开发工作；
+负责服务器端研发效能工具开发工作;
+负责服务器端性能优化工作。
+负责无线传输相关方案设计以及开发工作；
+负责构建手机无线网络测试环境，根据无线网络传输特征，选择合理的传输算法，实现算法并验证算法优化效果；
+完成项目相关技术文档的撰写、整理。
+负责大规模游戏服务器集群的架构设计、开发和维护、性能优化；
+高效地完成底层系统设计优化，以及登录、匹配、对战等系统的开发、测试和运维发布的工作；
+建立完善的监控和分析系统，保证业务高质量运行，并及时响应各种突发事件；
+1.	Responsible for the design and implement of game client security solutions
+2.	Responsible for the design and implement of security tools
+3.	Work on research and implement the leading edge of game security technology
+负责游戏产品玩法需求的技术可行性评估, 技术方案的设计和实现；
+协助引擎研发工程师建立高效的游戏内容制作管线，保障运行性能，完善并持续优化相关工具链；
+与策划/美术/服务端程序紧密合作, 完善游戏产品, 打磨用户体验。
+负责客户端各系统的技术研发，基于UE5打造虚拟开放世界； 
+与产品、设计、后端等上下游团队紧密配合构建技术通路； 
+持续打磨产品效果并不断优化整体性能。
+负责UE4射击类游戏系统框架的端\手游兼容性架构设计与优化；
+负责UE4射击类游戏的端游部分GamePlay优化与开发； 
+负责UE4射击类游戏的系统框架的搭建与维护； 
+能合理评估工作量，与策划设计人员进行良好沟通，持续跟进性能，体验优化；
+负责UE4端转手和手转端部分工具开发和工作流程优化。
+负责客户端玩法框架设计； 
+优化框架、流程以及工具，提升玩法游戏表现力和开发效率； 
+开发内容包括但不限于玩法编辑器、游戏脚本、界面、动画、AI、载具等
+负责客户端玩法框架设计及优化；
+不断优化既有程序框架、流程以及工具，提升玩法游戏表现力和开发效率；
+开发内容包括但不限于玩法编辑器、游戏脚本、界面、动画、AI、载具等。
+虚幻4/5引擎的动作、物理、特效、AI等技术的研究和运用，配合美术、策划完成功能落地；
+根据需求，进行引擎功能修改以及扩展；
+持续进行前沿技术探索。
+
+Responsible for TTS algorithms and other research and development work，quickly apply them to business;
+Follow the latest developments in academia and improve existing methods and publish papers;
+Research, design, implement, evaluate and optimize novel algorithms/models that lead to improved performance in real world scenarios. Singapore-CapitalSpring | Singapore-WeWork
+LightSpeed LA is seeking for a talented and enthusiastic senior engineer to join our new studio in sunny Irvine California. The ideal candidate will have a strong passion for games and enabling developers to deliver the most polished experience for our players. Join our team of industry veterans and help us build a team and culture of respect that pushes boundaries while having lots of fun.
+
+Responsibilities:
+
+• Help maintain a culture of fast iteration and practical problem solving
+• Work with IT teams to ensure a quality setup for all developers and pipelines
+• Work closely with teammates to design and build highly scalable, available, and reliable CI/CD processes using proven practices
+• Work with senior engineers to ensure fast interaction with source control, code review software and issue trackers
+• Help others automate build and artifact delivery for multiple platforms
+• Help make improvements to the team’s ability to develop and test the game, especially on consoles
+• Gather metrics and implement reporting tools to aid development of the game US-Irvine
+Responsible for TTS algorithms and other research and development work，quickly apply them to business;
+Follow the latest developments in academia and improve existing methods and publish papers;
+Research, design, implement, evaluate and optimize novel algorithms/models that lead to improved performance in real world scenarios.
+-Evaluate and design massively scalable game back-end services and assist in developing the project architecture;
+-Evaluate and design periphery back-end services and assist in developing the project architecture.
+1、负责3A游戏in-house工具链研发及管线搭建；
+2、负责Unreal引擎编辑器功能开发与扩展；
+3、负责美术/策划内容制作和流程优化相关工具研发；
+4、负责游戏项目质量保障工具链及平台研发；
+5、负责全球分布式团队研发效率优化及协同能力研发。
+
+基于海量微信支付数据，搭建全流程实时金融风控系统及其他实时数据服务，面临高并发、低时延、海量数据存储等系统挑战；参与微信支付业务系统的协同开发； 岗位职责： 负责微信支付大数据相关的工程应用平台开发，负责微信支付相关系统的协同建设开发。
+1，负责王者荣耀游戏系统的研发；
+2，负责重构和优化现有系统，优化工作流程，提高研发效率；
+3，负责解决游戏产品研发和线上运营过程中的各类问题；
+4，负责制作工具的开发，实现快速迭代及验证制作内容。
+1. 负责腾讯云网络数据转发相关的开发工作。
+2. 排查、定位并解决网络转发相关的问题。
+3. 持续优化产品，提高可靠性与性能。
+4. 改善工作流程，提高开发、测试和运维效率。
+负责邮箱项目的版本发布测试工作，包括需求分析、设计评审，技术风险评估、缺陷跟踪和质量分析等；
+测试方法/工具开发创新、自动化测试体系建设、测试效率提升。
+负责游戏产品玩法需求的技术可行性评估, 技术方案的设计和实现；
+协助引擎研发工程师建立高效的游戏内容制作管线，保障运行性能，完善并持续优化相关工具链；
+与策划、美术、服务端程序紧密合作，完善游戏产品，进行各种必要的尝试和探索，打磨用户体验。
+负责手机游戏服务器逻辑功能设计编码以及运营开发工作；
+负责部分服务器端的架构工作；
+负责部分服务器端的性能优化工作。
+负责游戏客户端开发，实现各种功能并进行相关的自测，跟进测试和持续优化；
+与策划、美术、服务器开发等密切配合，进行各种必要的尝试和探索，以使功能达到设计要求并体验良好；
+正确客观评估工作量，与PM共同制定合理工作计划并保证进度的达成。
+1、负责腾讯安全产品iOA产品的后台架构方案设计；
+2、负责腾讯安全产品iOA产品的模块开发工作；
+3、负责腾讯安全产品iOA产品的线上问题分析与调优。
+
+备注：此岗位为CSIG全资子公司编制。
+1. 负责腾讯云5G远程控制音视频业务场景化设计和场景化功能开发，针对不同行业场景打造细分领域的垂直化产品特性。
+2. 负责腾讯云5G远程控制音视频业务等场景的问题分析和汇总，剖析客户痛点，设计和完成最符合客户业务场景的解决方案。
+3. 负责腾讯云5G远程控制产品的功能维护、技术优化和技术支持工作，包括devops建设、性能优化和客户支持。
+
+带团队负责游戏客户端业务的设计和开发，工作包括但不限于框架设计、开发编码和各类协作；
+持续优化性能、需求表现和兼容性；
+协同策划建立高效的游戏内容制作管线；
+完善并持续优化工具链。
+Job Description
+As part of QA team，you will play the key role of game performance testing and analysis, making sure the team have the ability to help development team optimizing game performance, figuring out the performance problems of the games and giving efficacious solutions. Multiple 3A games on PC and Consoles are on the way!
+
+What you will do：
+1. Construct the performance testing and analysis frame for the team, enable the team on game performance analysis, on platforms both PC and consoles.
+2. Collaborate with the development team to understand the whole structure of the  games
+3. Take the ownership of game client performance analysis, performance testing tool development(if necessary)
+1、负责通讯业务相关后台系统的设计和开发工作；
+2、负责高并发下，业务系统的调优和容灾工作，使系统达到高可用、高可靠、高安全；
+3、负责参与相关产品需求讨论与产品系统架构的设计和优化工作。
+1、负责腾讯地图引擎SDK产品质量保障工作，通过对业务架构、代码到产品功能的全面理解，保障地图引擎SDK的质量，发现并定位缺陷，推动缺陷修复；
+2、参与toC、toB项目交付及测试体系建设，通过对引擎架构的深入研究，对其进行相应接口、功能、性能、稳定性等多维度的质量保证工作，提升引擎的交付质量和效率；
+3、负责质量及测试过程中改进工作的落地，包括但不限于自动化测试、DevOPS、推进质量内建等相关工作的具体落地，优化研发效率；
+
+备注：此岗位为腾讯集团旗下全资子公司编制岗位
+1. Design and implement Windows client framework and features
+2. Performance analysis and optimize of Windows client 
+3. Work on research and implement client cross platform technology 
+1，负责王者荣耀活动玩法开发； 
+2，负责王者荣耀教学玩法开发； 
+3，在技术框架下，实现关卡玩法新机制； 
+4，完善开发管线，提升管线效率。
+1、负责微信读书/听书客户端的开发维护工作，包括性能调优、技术难点攻坚等；
+2、参加专项技术调研、新技术探索；
+3、参加性能和稳定性相关的体系建设、相关的工具开发，保证软件质量和研发效率。
+ US-Irvine
+• Work with channel partners by promoting cooperative selling to the market.
+• Understands customers’ businesses and builds relationships with key decision maker.
+• Demonstrate solid knowledge of your customers' positions within an industry or channel, your partners' strategies, needs, and profitability drivers.
+• Improve partner performance to enable best practices, training and support.
+• Provide customers with Tencent Cloud's value proposition and directly lead key pipelines.
+• Utilize networking and prospecting skills to generate leads and identify strategic solution based sales opportunities.
+• Develop and manage high-value relationships with key stakeholders.
+• Provide leadership and guidance to other team members on enterprise accounts and participate in providing input on sales and marketing collateral.
+• Partner with the Business Contracts Manager on contract negotiations.
+• Achieve/exceed sales goals, sustain revenue growth and provide recommendations to enhance account growth and revenue potential.
+• Preparation and execution of strategic account plans, status reports, sales and revenue forecasting and quota attainment.
+• Become proficient in Tencent’s cloud offerings, working to understand customers need and providing service solutions.
+• Develop strategic Partner plans based on industry trending(FSI/Manufacturing&Energy/Pan-Internet/ISV) and customer analysis.
+• Work closely with the Solutions Engineer team in delivering and ensuring Partners are gaining high value from their investments.
+• Manage Partner sales life-cycle for all accounts. UAE-Dubai
+1.基于微信生态，负责 微信分付 等 信贷项目 后台相关的系统方案设计、性能优化、系统可用性建设等研发工作；
+2.负责信贷类金融系统的需求分析、方案设计、技术实现和运营维护；
+3.负责贷款产品的后台架构长期优化，保障金融服务的安全；
+4.参与信贷系统的建设，建模、方案设计、开发、系统可用建设等。
+挑战： 金融级支付应用系统的可用性保障及优化； 海量数据后台系统的架构设计及优化；
+负责视频号推荐服务的架构研发，包括样本拼接、特征/正排系统、画像系统、召回、排序、混排等模块；
+优化和维护在线推荐服务，改进推荐服务稳定性、效率、延迟，能够分析和优化系统瓶颈，保证系统安全、稳定、高效运行，为亿级用户提供优质体验。
+
+1、负责建设合规、完整的商户管理运营能力，涉及到资金安全，运营安全，事务，一致性等；
+2、负责微信支付商户的入驻流程能力持续完善，涉及到运营安全，通过机器算法来提高入驻/审核效率等； 
+3、负责前沿的技术研发工作，建立金融级的业务流和技术框架。
+1、负责核心技术的技术架构设计、技术选型、核心代码开发 、难点攻坚等工作，包括但不限于：
+*策略研发PaaS平台，AI工程化平台
+*海量分布式相似向量检索引擎
+*海量多媒体数据预处理
+2、掌握行业动态，能够有效理解、分析业务痛点，进行前瞻性的规划和设计
+负责游戏AI的算法研究和应用，包括但不限于强化学习、模仿学习等；
+负责设计新的强化学习算法，提高强化学习效率和效果，并结合游戏应用场景，提供技术解决方案；
+负责前沿技术的探索，推进强化学习在更多业务场景的应用。
+LightSpeed LA is seeking for a talented and enthusiastic rendering VFX engineer to join our new studio in sunny Irvine California. The ideal candidate will have a strong passion for games and enabling content creators to deliver the most polished experience for our players and push the boundaries of what we can do today. Join our team of industry veterans and help us build a team and culture of respect that pushes boundaries while having lots of fun. 
+
+Responsibilities:
+
+• Help maintain a culture of fast iteration and practical problem solving
+• Own the VFX rendering pipeline and tools
+• Work with the VFX team to get the most out of the system and implement new solutions to enable them to push the bar higher
+• Evolve iteratively existing systems into state of the art solutions US-Irvine
+参与Tencent Kona JDK 、Python虚拟机、深度学习编译器等产品研发，围绕大数据、广告推荐/AI、游戏等超大规模场景；参与自研静态/动态编译器、GC算法、深度学习编译等研发与优化，并参与OpenJDK等社区贡献。
+
+1，负责技术专项攻坚；
+2，负责公共组件开发；
+3，负责发现和改进研发能力中的不足；
+4，负责游戏基础技术能力体系建设。
+VR生态建设： OpenXR/GSXR Runtime状态机逻辑开发
+1、负责VR Runtime的整体把控，包括架构的设计；
+2、对VROS渲染、显示、Input、Disaplay深度定制后的成果进行封装。 以VR Runtime的形式对上层提供接口；
+3、负责VR Runtime的多平台开发，以及深度调优和稳定性跟进；
+负责基础系统的开发，如OBS构建系统，软件源，自动化测试系统及镜像构建系统等；                          
+负责工具开发，包括安装工具，配置工具，检查修复类工具，备份还原工具等；
+负责运营管理类系统开发，如监控系统，性能分析和调优系统等；
+负责对外发布系统建设，如安全通告系统，缺陷跟踪系统，产品官网等；
+
+1、负责腾讯云IAAS基础设施运营平台系统的架构设计和开发，包括监控告警、自动化平台、运营分析、大数据处理集群等系统的开发与维护；
+2、通过运维自动化、智能化的建设，提升腾讯云运维效率与质量；
+3、通过机器学习、海量数据处理等相关技术，支持腾讯云智能化运维及精细化运营。
+注：此岗位为腾讯集团旗下全资子公司编制岗位

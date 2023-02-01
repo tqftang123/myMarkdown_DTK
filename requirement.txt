@@ -1,0 +1,541 @@
+1、本科及以上学历，计算机、软件或地理信息（GIS）相关专业，2年以上工作经验； 
+2、精通C++语言，具备扎实的基本功和良好的编程习惯； 
+3、有渲染、导航、诱导播报领域知识经验者佳 有跨平台开发或适配的经验，有移动端（Android）开发经验佳，有车载系统开发经验佳； 
+注：此岗位为腾讯集团旗下全资子公司编制岗位
+1.计算机相关本科以上学历，3年以上工作经验
+2.熟练掌握基本的数据结构及相关算法，复杂度分析方法
+3.熟练掌握C++，并至少熟悉一门脚本语言（phython/shell等）
+4.熟练掌握多线程/多进程编程相关技术，熟悉OS基本原理
+5.熟悉TCP/UDP/HTTP/websocket等通信协议，有一定的相关开发及调试经验
+6.有K8S/docker/分布式系统等相关经验优先
+注：此岗位为腾讯集团旗下全资子公司编制岗位
+1.计算机相关本科以上学历，3年以上工作经验
+2.熟练掌握基本的数据结构及相关算法，复杂度分析方法
+3.熟练掌握C++，并至少熟悉一门脚本语言（phython/shell等）
+4.熟练掌握多线程/多进程编程相关技术，熟悉OS基本原理
+5.熟悉TCP/UDP/HTTP/websocket等通信协议，有一定的相关开发及调试经验
+6.有K8S/docker/分布式系统等相关经验优先
+
+注：此岗位为腾讯集团旗下全资子公司编制岗位
+1. 计算机相关专业本科以上学历;
+2. 1 年以上 C++ 开发经验;
+3. 对 stl 等标准库有深入了解;
+4. 有音视频相关开发经验的优先;
+5. 有 Windows，Mac，iOS，Android 开发经验的优先;
+6. 编程基本功扎实，具有良好的代码风格;
+7. 熟悉面向对象程序设计，熟悉常见的设计模式;
+8. 工作态度积极，善于主动学习思考，责任心强，对技术有强烈兴趣;
+9. 思路严谨，具备良好的分析解决问题能力，能独立承担任务;
+10. 有良好的沟通协作能力、抗压能力，有强烈的主人翁意识推进项目进展.
+注：此岗位为腾讯集团旗下全资子公司编制岗位 通过腾讯云从业资格证或同等资格认证的优先录取
+4年以上游戏文案策划经验，有从游戏研发到上线的完整项目经历，对世界观构建、传统剧作、游戏叙事呈现手法、内容制作落地有较为深刻的理解；
+优秀的文案功底，科幻作品阅读量广。有科幻类题材的写作经验者优先；
+有丰富的游戏经历，FPS经历丰富者优先；
+熟悉UE4引擎及任务工具制作者优先。
+
+任职要求：
+  1. 计算机相关专业本科以上学历；
+  2. 3 年以上 C++ 开发经验；
+  3. 对 stl 等标准库有深入了解；
+  4. 有 Windows，Mac，iOS，Android 开发经验的优先；
+  5. 有 NodeJS，Python 等技术积累的优先；
+  6. 编程基本功扎实，具有良好的代码风格；
+  7. 工作态度积极，善于主动学习思考，责任心强，对技术有强烈兴趣；
+  8. 思路严谨，具备良好的分析解决问题能力，能独立承担任务。
+
+备注：此岗位为腾讯集团旗下全资子公司编制岗位 通过腾讯云从业资格证或同等资格认证的优先录取
+任职要求：
+  1. 计算机相关专业本科以上学历；
+  2. 3 年以上 C++ 开发经验；
+  3. 对 stl 等标准库有深入了解；
+  4. 有 Windows，Mac，iOS，Android 开发经验的优先；
+  5. 有 NodeJS，Python 等技术积累的优先；
+  6. 编程基本功扎实，具有良好的代码风格；
+  7. 工作态度积极，善于主动学习思考，责任心强，对技术有强烈兴趣；
+  8. 思路严谨，具备良好的分析解决问题能力，能独立承担任务。
+
+备注：此岗位为腾讯集团旗下全资子公司编制岗位 通过腾讯云从业资格证或同等资格认证的优先录取
+-5+ years of experience in Linux backend development;
+-Proficient C/C++ skills and knowledge of advanced data structures and algorithms;
+-Experience in most general software design patterns;
+-Highly skilled in TCP(UDP)IP, networking, client-server systems
+- Master’s degree or PhD. in computer science, AI, applied math, automation, pattern recognition, bioinformatics, statistics or a related field.
+- Proficient in one or more programming languages (e.g. C/C++, Java, python); 
+- Experience in large-scale dat
+Bachelor’s degree or higher;
+3+ years of experience as a software tester;
+Practical experience in game testing;
+Ability to quickly pick up new technical skills and execute effectively;
+Very observant along with good analytical and logical reasoning abilities;
+Practical experience with leading a team to complete the testing project;
+Ability to work under pressure, have a strong interest in and passion for games;
+Have knowledge in a Programming Language (C++,C,C#,PHP,Python);
+Familiar with main operating systems (Windows, Linux, Android ), TCP protocol, etc;
+Experience in server performance testing, capability testing, and safety testing is preferred.
+Minimum Qualifications:
+
+MS in Computer Science, Electrical Engineering or related technical field, or equivalent practical experience.
+Familiarity with Unity and Unreal Engine plugin development
+Proficiency in C/C++/C#
+Knowledge of streaming media protocols: HTTP Live Streaming (HLS),DASH, RTMP, RTSP, and GStreamer pipelines.
+Understand media codecs, formats, transports and container protocols, such as Webm, HEVC, AAC, MP4, TS, etc
+Familiarity with CDN architectures (caches, origin servers, proxies, etc)
+Excellent debugging and troubleshooting skills using network analysis tools such as WireShark, etc
+
+Preferred Qualifications
+
+Experience in AR/VR and 360 video streaming is a plus
+两年以上Linux后台开发经验；
+精通C\C++，数据结构和算法，关注代码质量和性能优化；
+熟悉常用设计模式；
+熟悉网络编程以及数据库使用；
+对海量、高性能、分布式开发有经验者优先。
+3年以上游戏开发经验； 
+精通C++或者C#，懂Objective-C，精通lua脚本语言； 
+熟悉android 和 IOS 系统，数据结构、面向对象开发和设计；
+具备unreal 4 引擎开发经验；
+具备良好的学习和技术研究应用的能力；
+出色的团队协作能力，善于沟通，敬业专注； 
+责任心强，踏实肯干，有较强的自我管理和推动能力； 
+有网络游戏或者移动平台游戏完整研发经验者优先。
+Master degree in computer science, electrical engineering, math, statistics, or related fields
+5+ years of related working experience
+Publications at top-tier peer-reviewed conferences
+Interest and experience in video compression and video coding standards
+Strong coding skills in C/C++
+Ability to communicate/collaborate with other researchers/engineers
+Ability to think out of box
+Required Skills
+
+5+ years of proven game design and scripting experience in a professional environment.
+A strong desire for solving complex technical and creative problems
+A good understanding of object-oriented programming patterns.
+Assume responsibility for scripting intricate content and systems
+Set the bar for the design department’s implementation of scripted content
+
+
+Preferred Qualifications
+
+Technical Degree (CS, IT, SE, CE, or equivalent work experience) is a plus
+Multiple programming languages: one of C/C++/C#/Java to a reasonable knowledge
+Ability to drive problem solving by predicting problems, producing test cases, and implementing fixes in systems and tools
+Strong experience with Visual Scripting languages (Kismet, Blueprint, etc.)
+A deep understanding of how open world systems affect gameplay
+Required Skills
+
+5+ years of proven game design and scripting experience in a professional environment.
+A strong desire for solving complex technical and creative problems
+A good understanding of object-oriented programming patterns.
+Assume responsibility for scripting intricate content and systems
+Set the bar for the design department’s implementation of scripted content
+
+
+Preferred Qualifications
+
+Technical Degree (CS, IT, SE, CE, or equivalent work experience) is a plus
+Multiple programming languages: one of C/C++/C#/Java to a reasonable knowledge
+Ability to drive problem solving by predicting problems, producing test cases, and implementing fixes in systems and tools
+Strong experience with Visual Scripting languages (Kismet, Blueprint, etc.)
+A deep understanding of how open world systems affect gameplay
+3+ years of hands-on experience in video games quality assurance;
+Bachelor or higher degree from an accredited college/university;
+Familiar with C/C++ or Java languages;
+Familiar with one of the following scripting languages: shell, Perl, and python;
+Expertise in LINUX and TCP/IP, HTTP messaging protocol;
+Experience with White-Box testing, server/client performance testing, capability testing, and security testing is preferred.
+3+ years of hands-on experience in video games quality assurance;
+Bachelor or higher degree from an accredited college/university;
+Familiar with C/C++ or Java languages;
+Familiar with one of the following scripting languages: shell, Perl, and python;
+Expertise in LINUX and TCP/IP, HTTP messaging protocol;
+Experience with White-Box testing, server/client performance testing, capability testing, and security testing is preferred.
+3+ years of experience in Linux backend development;
+Skillful at C/C++, with knowledge of data structures and algorithms;
+Experience in common software design patterns;
+Highly proficient in TCP(UDP)IP, networking, client-server systems, and high-performance distributed systems;
+Experience in Micro-services, Cloud Native Architecture, Docker, container-driven systems, and SQL/No-SQL Databases;
+Strong sense of responsibility and good at communication.
+本科或以上计算机科学相关专业；
+熟悉 Unity 或 UE4 的图形渲染管道及开发；
+熟悉图形学算法，关注前沿图形学技术及其在游戏中的应用；
+熟悉 CPU/GPU 架构及相关开发技术；
+责任心强，善于沟通；
+熟悉 C/C++，具备扎实的数学、数据结构和算法基础，熟悉常用设计模式；
+熟悉性能和内存优化，测试驱动开发；
+熟悉 PC／移动端平台的游戏开发。
+Bachelor or above degree in computer science or related curriculum;
+development experience;
+Familiar with the graphics pipeline and development in Unity or UE4;
+Familiar with computer graphics algorithms, follow state-of-the-art compute graphics technology and their application in games;
+Familiar with CPU/GPU architecture and related developent skills;
+Highly accountable, good communication sklls;
+Fluent in C/C++, solid knowledge in mathematics, data strctures and algorithms, good knowledge in common design patterns;
+Familiar with performance and memory optimization, test-driven development;
+Familiar with PC/mobile platform game development.
+本科以上学历，计算机相关专业，有3年以上游戏测试经验，有具有快速熟悉业务流程和优化，并建立完善质量体系的能力；
+有全局观，对质量体系、流程、测试风险把握、测试范畴的定义有很好的理解和应用，具有移动互联网相关经验(Android、iOS)尤佳；
+熟悉至少一门开发或者脚本语言，C++、C、C#、Java、PHP、Python等；
+优秀的执行力和抗压能力，热爱游戏测试，乐于主动反馈和积极思考。
+•	Bachelor degree in Mathematics, Economics, Statistics, Data Science, Computer Vision or similar quantitative field
+•	Ability to communicate complex ideas to non-technical stakeholders in a way they can easily understand and appreciate.
+•	Good knowledge of Python or C/C++ programming language
+•	Self-driven, innovative, collaborative, with good communication and presentation skills, able to translate between business and technical audiences
+•	Fluency in both English and Mandarin to deal with international stakeholders and stakeholders who are based in HQ
+
+本科及以上学历，3年以上游戏相关开发经验； 
+精通c++，熟悉c#，掌握常用算法及设计模式，数学,物理基础扎实； 
+具有优秀的学习能力和沟通能力，有责任心，对游戏事业有热情； 
+有moba开发，熟悉引擎底层机制，crash定位，性能优化经验者优先考虑；
+1、本科以上学历，计算机相关专业，有2年以上竞技手游测试经验；
+2、有全局观，对质量体系、流程、测试风险把握、测试范畴的定义有很好的理解和应用，具有移动互联网相关经验(Android、iOS)；
+3、熟悉主流操作系统原理（Windows、Linux、Android、iOS）、网络协议等，有过前后端性能、安全、兼容等专项测试经验；
+4、熟悉至少一门开发或者脚本语言，C++、C、C#、Java、PHP、Python等；
+5、优秀的执行力和抗压能力，热爱游戏测试，乐于主动反馈和积极思考。
+3+ years of experience working as a Software Engineer, Unreal Developer or comparative role;
+Experienced with multiplayer gameplay systems, network replication, core engine and Virtual Reality technologies;
+Shipped at least 1 title utilizing Unreal Engine 4/5, preferably within a technology role;
+Great understanding of modern C / C++/Blueprints;
+Solid technical understanding or experience with JSON, REST, Socket & Websocket standards;
+Excellent communication and collaborative problem-solving skills;
+Familiarity with source control (git/p4/subversion/...).
+
+Preferred skills
+Hands-on experience from the technical side of game production;
+Knowledge of C#, TypeScript, Python, or related languages;
+Working with build or data cooking automation;
+Working with CI/CD pipelines and their care and maintenance;
+Working in open source projects;
+Experience working with other platforms (consoles, Linux, macOS) and toolchains (GCC, Clang, …).
+热爱游戏行业者优先；
+计算机/数学/语音/人工智能相关专业，硕士及以上学历；
+精通C/C++、Java、Python等至少一门编程语言；
+扎实的机器学习/深度学习基础，熟悉基本方法论和经典算法；
+熟练使用至少一种深度学习框架，包括但不限于 PyTorch/TensorFlow/MXNet；
+有ICASSP，Interspeech，ASRU等国际会议，IEEE和ACM等相关期刊文章者优先；
+有良好的逻辑思维能力和数据敏感度，能够熟练阅读和编写英文论文。
+Passionate about the gaming industry is preferred;
+Master’s or PhD Degree in computer science, mathematics, speech processing or AI fields;
+Proficient in at least one programming language such as C/C+ 、Java 、Python;
+Solid machine learning/deep learning foundation, familiar with basic methodology and classical algorithms;
+Familiar with at least one deep learning platforms such as PyTorch,TensorFlow,MXNet,etc.;
+Publication of high-quality academic results in academic journals and conferences such as ICASSP, Interspeech, ASRU, NIPS, IEEE, ACM, etc.;
+High ability in logical thinking and data sensitivity and proficient in English reading and writing academic papers.
+本科及以上学历，1年以上开发经验；
+熟悉C++/C, shell，Linux开发环境；
+有良好的工程开发能力；
+有良好的沟通协作能力和产品运营风险意识；
+有平台分布式架构经验者优先；
+喜欢游戏，对游戏产品有较深刻理解或游戏业务开发经验者优先；
+熟悉python，golang者优先。
+3年以上蜂窝通信协议开发工作经验 ，1年以上无线通信相关开发经验；
+熟练掌握移动通信原理，熟悉3GPP协议以及相关标准架构；
+精通C++/C，有扎实的编程功底；
+熟悉TCP/IP协议及互联网常见应用和协议的原理；
+熟悉Linux网络传输模块，能够进行应用层软件开发。
+精通Go/C/C++/的至少一种，基础扎实，具备大型项目开发经验；
+具备大规模高可用微服务架构设计开发经验；
+熟悉Linux系统、shell命令、调试工具等；
+熟悉TCP/IP原理，有网络编程经验；
+聪明好学，具备较强的分析和解决问题能力；
+热爱游戏行业，性格开朗，易于沟通协作， 自驱力强；
+1. Familiarity with the client security of Windows/Android/iOS platforms, including but not limited to binary reverse engineering, vulnerability mining, code protection/obfuscation technology
+2. Familiarity with C/C++ programming, prior experienced in Windows/Android/iOS platforms debugging technology
+3. Prior experienced in code security audit 
+4. Prior experienced in development of anti-cheat solutions
+5. Prior experienced in Unity/UE game development
+6. Prior experienced in Windows/Android/iOS system low level principle
+三年以上游戏客户端开发经验，至少参与过一款3D游戏项目，对游戏研发技术领域有较为全面的了解和关注；
+熟悉软件研发领域知识(计算机系统、OS、数据结构等)，熟练使用C#, lua, C/C++；
+丰富的Unity3D引擎实践经验，熟悉其框架和主要模块的功能特性，并能熟练应用于Gameplay的开发；
+出色的学习能力，良好的问题分析解决能力；
+责任心强，有较高的团队协作和任务跟进能力，善于沟通，使命必达；
+热爱游戏，关注用户体验，有Geek精神，懂得以螺旋上升的方式追求极致。
+本科以上学历，2年以上3D游戏客户端开发经验，熟悉任一款商业开发引擎(UE/Unity/Frostbite/CryEngine等)； 
+熟练掌握一门游戏客户端开发语言(c++/c#/python/lua等)，有熟悉c++优先； 
+具备较好的数据结构基础，了解常用设计模式，对代码质量有一定追求，能够独立定位并解决相关问题； 
+在游戏AI/大世界程序化生成/角色动画/网络同步/场景渲染/逻辑框架/插件开发等任一方向上有较好的技术积累； 
+对前沿技术保持热情，良好的责任心和沟通能力，愿意尝试新方向。
+熟练掌握C++，熟悉lua或者其他脚本语言；
+具有至少2年的UE4 gameplay相关开发经验；
+有3C、AI、动画或者其他模块深度优化经验者优先；
+有基于UE4的项目优化经验者优先；
+有UE项目工具开发经验者预先；
+对FPS游戏熟悉和热爱者优先；
+有优秀的学习能力，善于沟通，热爱游戏事业。
+
+本科以上学历，3年以上游戏客户端开发经验； 
+熟练使用C++/C#，具备扎实的数据结构、算法、多线程编程、网络基础等； 
+有优秀的学习能力和攻坚能力，善于沟通，具备良好的团队开发意识，热爱游戏事业，对技术有极客精神； 有3D FPS/RPG/MOBA 玩法开发经验者优先。
+本科以上学历，3年以上游戏客户端开发经验；
+熟练使用C++/C#，具备扎实的数据结构、算法、多线程编程、网络基础等；
+有优秀的学习能力和攻坚能力，善于沟通，具备良好的团队开发意识，热爱游戏事业，对技术有极客精神；
+有3D FPS/RPG/MOBA 玩法开发经验者优先。
+本科或以上计算机科学相关专业；
+2年以上游戏开发经验，1年或以上引擎开发经验；熟悉动作、物理、特效、AI等引擎模块；
+熟悉C/C++，具备扎实的数学、数据结构和算法基础，熟悉常用设计模式；
+熟悉性能和内存优化；
+熟悉PC/移动端平台的游戏开发；
+有优秀的学习能力，善于沟通，热爱游戏事业。
+Passionate about the gaming industry is preferred;
+Master’s or PhD Degree in computer science, mathematics, speech processing or AI fields;
+Proficient in at least one programming language such as C/C+ 、Java 、Python;
+Solid machine learning/deep learning foundation, familiar with basic methodology and classical algorithms;
+
+Familiar with at least one deep learning platforms such as PyTorch,TensorFlow,MXNet,etc.;
+Publication of high-quality academic results in academic journals and conferences such as ICASSP, Interspeech, ASRU, NIPS, IEEE, ACM, etc.;
+High ability in logical thinking and data sensitivity and proficient in English reading and writing academic papers.
+Requirements:
+
+• Passion for games and the tech that makes them come to life
+• Experience with C++, C# and Python
+• Experience with CI/CD tools such as Jenkins
+• Experience with source control systems such as Perforce and Git
+• Ability to communicate effectively with technical artists and other engineers
+• High comfort level extending and improving an established code base
+• Value lean, simple, efficient, well-tested code
+
+Preferred:
+
+• Shipped a game on PC and Consoles
+• Familiarity with AAA asset and code pipelines is a plus
+• Familiarity with console build and deploy pipelines
+• Experience with Incredibuild
+• Experience with artifact repositories such as Artifactory
+• Experience with configuration management tools such as Chef or Puppet
+assionate about the gaming industry is preferred;
+Master’s or PhD Degree in computer science, mathematics, speech processing or AI fields;
+Proficient in at least one programming language such as C/C+ 、Java 、Python;
+Solid machine learning/deep learning foundation, familiar with basic methodology and classical algorithms;
+
+Familiar with at least one deep learning platforms such as PyTorch,TensorFlow,MXNet,etc.;
+Publication of high-quality academic results in academic journals and conferences such as ICASSP, Interspeech, ASRU, NIPS, IEEE, ACM, etc.;
+High ability in logical thinking and data sensitivity and proficient in English reading and writing academic papers.
+-5+ years of experience in Linux backend development;
+-Proficient C/C++ skills and knowledge of advanced data structures and algorithms;
+-Experience in most general software design patterns;
+-Highly skilled in TCP(UDP)IP, networking, client-server systems, and high-performance distributed systems;
+-Experience in Micro-services, Cloud Native Architecture, Docker, container-driven systems, and SQL/No-SQL Databases;
+-Responsible and able to control the development progress and quality of the modules under your responsibility;
+-Good analytical problem-solving skills.
+1、本科及以上学历，精通C/C++，具备扎实的数据结构和算法基础，熟悉常用设计模式；
+2、3年以上UE或Unity引擎开发经验；
+3、具有大型游戏项目管线开发经验优先；
+4、具有大前端开发经验优先；
+5、有责任感，有良好的沟通能力，具备团队合作精神； 
+6、具备良好的抗压能力，对游戏开发充满热情。
+本科及以上学历，计算机相关专业，3年及以上后台开发经验； 熟悉C/C++、Unix高级编程、网络编程、MySQL应用，有高并发海量服务的开发经验； 有风控系统、规则引擎、机器学习、分布式系统、大数据服务方面的开发经验者优先； 良好的沟通表达能力，执行力强，对待工作认真严谨、高度负责。
+1，本科及以上学历，3年以上游戏开发经验；
+2，熟练掌握C#，C++；
+3，扎实的算法和数学基础, 系统全面的软件研发领域知识(计算机系统, OS、数据结构等)；
+4，有Unity开发经验，有相关工具开发或者流程优化经验；
+5，出色的学习和技术研究应用能力, 良好的团队协作能力, 善于沟通, 敬业专注。
+1. 3年以上C/C++网络编程经验，数据结构和算法基础扎实。
+2. 有DPDK、Linux内核或者性能优化相关经验者更优。
+3. 熟悉TCP/IP等网络协议。
+4. 思维严密，逻辑清晰，对工作精益求精。
+5. 具有良好的沟通、学习和分析解决问题能力。
+6. 责任心强，抗压能力强，有团队精神。
+本科及以上学历，2年或2年以上软件测试或开发经验，精通软件测试理论和方法，熟悉主流测试框架和工具； 
+熟悉Linux、Tcp/Ip、HTTP网络协议相关知识;熟练掌握C/C++、java、python、shell其中一到两种开发语言；
+具备较强的沟通推动能力、项目管理与风险把控能力；
+有开发经验/性能调优经验者优先。
+三年以上游戏客户端开发经验，至少参与过一款大型重度3D游戏（MMORPG/FPS/MOBA）的研发，对游戏研发技术领域有较为全面的了解和关注；
+有引擎开发经验者优先；
+熟悉软件研发领域知识(计算机系统、OS、数据结构等)，熟练使用C#, lua, C/C++；
+丰富的Unity3D引擎实践经验，熟悉其框架和主要模块的功能特性，并能熟练应用于Gameplay的开发；
+出色的学习能力，良好的问题分析解决能力；
+责任心强，有较高的团队协作和任务跟进能力，善于沟通，使命必达；
+热爱游戏，关注用户体验，有Geek精神，懂得以螺旋上升的方式追求极致。
+热爱游戏，3年以上游戏服务器开发经验；
+计算机相关专业本科及以上学历；
+精通c/c++语言编程，熟悉数据库设计，熟悉TCP/IP和网络编程，熟悉大规模高性能服务器开发；
+良好的分析解决问题能力，良好的团队合作能力, 有高质量的代码，能独立承担任务和有系统进度把控能力。
+大学本科及以上学历；
+2年以上开发工作经验；有游戏开发工作经验的优先；
+熟练使用C++、C#语言；了解并使用过Js，Lua等脚本语言的优先；
+精通Unity3D引擎或UE引擎的优先；对渲染技术有研究或者性能优化特长者更佳；
+对游戏开发充满热情，能够与他人良好配合、协作；
+态度认真、严谨，责任心强。
+1、本科及以上学历，3年以上私有化后台架构研发和架构经验；
+2、掌握Linux平台下的C/C++/Go一种以上语言并有实际工程经验，熟悉网络编程，掌握常用的通信协议；
+3、精通后台的常用中间件原理和应用，包括PostgreSQL，Redis，etcd等；
+4、熟悉K8S, Sevice Mesh微服务架构、消息推送等技术者优先考虑。
+1. 计算机相关专业本科及以上学历，3年以上音视频相关开发经验，具备良好的c/c++编程能力和快速开发能力。
+2. 熟练掌握windows和linux端的音视频采集、编解码和渲染开发。
+3. 熟悉webrtc框架和掌握webrtc传输协议和原理。
+4. 精通c++ /go语言，具备优秀的编码能力。
+5. 熟悉软件服务的可运营性建设。
+6. 有良好的逻辑思维能力和数据分析能力，善于分析和解决问题。
+7. 有良好的沟通能力、团队协作能力和抗压能力，充满责任感和创新意识。
+注：此岗位为腾讯集团旗下全资子公司编制岗位
+计算机相关专业，本科及以上学历；
+5年以上游戏客户端研发经验或2年以上UE4引擎开发经验；
+有优秀的软件工程功底与知识结构, 精通C/C++及常用脚本语言；
+熟悉设计模式，数据结构和算法；
+有优秀的学习能力，热爱游戏事业，良好的团队协作能力与敬业精神；
+有手游项目研发管理经验。
+What you bring：
+1. 8+ years of experience in game performance testing and performance analysis(client side)
+2. Strong knowledge of gaming platforms, both PC and consoles
+3. Strong knowledge of GPU rendering analysis（both AMD and Nvidia will be better) and CPU bottleneck analysis, excellent skills in CPU and GPU limitation analyzing, along with debugging and troubleshooting abilities
+4. Have the experience in developing testing tools and testing scripts, in any of the following: C/C++, java, python
+5. Have a good understanding of game development engines, eg. Unity, Unreal or other engines.
+1、本科以上学历，具备Unix/Linux下C/C++ 5年以上开发经验；
+2、精通TCP/IP协议，进程间通讯编程；
+3、熟悉Unix/Linux操作系统原理，shell命令，常用工具；
+4、熟悉Mysql等数据库管理、开发,SQL调优；
+5、精通面向对象设计，熟悉UML等建模工具；
+6、要求精通C++，全面的软件知识结构(操作系统、软件工程、设计模式、数据结构、数据库系统、网络安全)；
+7、具备良好的分析解决问题能力，能独立承担任务和有系统进度把控能力；
+8、责任心强，良好的对外沟通和团队协作能力，主动，好学；
+9、有互联网电子商务系统、在线支付、通讯行业相关开发经验者优先。
+1、计算机或软件相关专业，本科及以上学历，具备扎实的计算机和软件技术基础；
+2、具备扎实的测试经验，能够灵活通过单测/接口测试/性能测试/稳定性测试等手段，高效发现系统缺陷；
+3、三年以上软件测试开发经验，能熟练掌握运用至少一门编程语言（C++/java/python/object-c）；
+4、了解Devops理念，有CI/CD持续集成相关经验者优先；
+5、有参与过ToC/ToB项目交付的标准化测试体系建设者优先，熟悉C端/B端项目的标准化流程；
+6、热爱学习，具备自我持续优化的驱动力，且有一定抗压能力、自驱力，有较强责任心和团队协作精神；
+1.	Experienced in Windows client development, have developed at least one public released client application 
+2.	Strong experienced in C/C++ programming, familiarity with MFC/COM/STL, Windows Programming and Windbg debugging tools
+3.	Familiarity with Windows operation system principle, such as File System/Process or thread management/Memory management
+4.	Prior experienced in design of full client framework
+5.	Prior experienced in performance analysis and optimize
+6.	Prior experienced in Windows driver development
+7.	Prior experienced in Windows/Android/iOS system low level mechanism
+8.	Responsibility, good teamwork and communication skills
+1，本科及以上学历，3年以上游戏开发经验；
+2，熟练掌握C#，C++；
+3，扎实的算法和数学基础, 系统全面的软件研发领域知识(计算机系统, OS、数据结构等)；
+4，有Unity开发经验，有相关工具开发或者流程优化经验；
+5，有moba gameplay开发经验优先
+6，出色的学习和技术研究应用能力, 良好的团队协作能力, 善于沟通, 敬业专注。
+1、计算机相关专业本科以上学历，三年以上客户端应用开发经验；
+2、熟悉 C++/Kotlin/Swift/Objective-C 至少一门客户端语言；
+3、深入了解  iOS/Android/Windows/macOS 平台特性，对各种系统运行机制有过深度挖掘优先；
+4、有性能优化相关经验，了解常见的性能优化问题以及解决方案；
+5、了解 LLVM 编译器和工具链相关技术优先。
+Requirements:
+
+Passion for games and the tech that makes them come to life
+
+Expert with C++, C# and Python
+
+Experience building parallel or distributed algorithms
+
+Experience developing GUI applications for content creators
+
+Advanced knowledge of game content delivery pipelines and tools
+
+Good 3D math skills
+
+Ability to communicate effectively with technical artists, design and other engineers
+
+High comfort level extending and improving an established code base
+
+Value lean, simple, efficient, well-tested code
+
+Preferred:
+
+Shipped a game on PC and Consoles
+
+Experience with DCC tools like Maya, Houdini, Blender, etc.
+
+Familiarity with AAA asset and code pipelines
+
+Familiarity with console build and deploy pipelines
+
+Experience with Incredibuild
+
+Experience with source control systems such as Perforce
+• 10+ years’experience selling IT and cloud services, Zero to one market / customer / channel partner breakthrough experience.
+• Exhibits “hunter” mentality and possesses outstanding ability to close sales.
+• Proven record and strong capability to generate leads, pursue opportunities and sell.
+• Experience selling at C-level and working with C-Levels in Partner organisations.
+• Outstanding presentation and communication skills. Ability to communicate effectively and tactfully with customer and staff at all levels.
+• Possesses strong sensibility for technology.
+• Ability to solve customer-related problems in a positive manner.
+• Strong in consultative and insight-based selling
+• Experience articulating complex solutions to decision makers and executives.
+• Proven ability to grow revenue and manage accounts
+• Knowledge of Cloud, CDN , SaaS industry and internet space
+• Experience analyzing data, trends and the market to develop key selling points
+• Experience working with partners (Consulting, Channel, ISV) with a track record of accelerating overall business outcomes.
+• The ability to work well in a team environment and to build interdependent partnerships.
+• Experience in problem solving, negotiation, and decision making.
+• Continually learning about new products, technologies, and communication skill.
+• Diplomacy and comfort to manage complex partner conversations.
+• Demonstrated aptitude to engage and influence C-level executives.
+1、熟悉linux下网络编程及多线程/进程开发模式，良好的算法和数据结构基础
+2、熟练掌握或者愿意转C/C++/编程语言，对python语言有一定了解
+3、对mysql及kv存储有一定的应用实践经验， 有一定的分布式系统设计的相关实战经验优先
+4、对web安全有良好的实践经验
+5、敢于思辨，不断进取，对技术有一定追求
+计算机相关专业，本科及以上学历，3年及以上工作经验； 
+熟悉 Linux 开发环境、熟悉C/C++编程语言，熟练掌握常用算法和数据结构，有搜索/广告/推荐方向业务开发经验，熟练掌握至少一门脚本语言（shell/python等） ；
+有推荐/广告/搜索等系统构建经验者优先，对推荐系统相关算法了解者优先；
+具备扎实数学/算法功底，对机器学习、概率统计等算法原理有所了解者优先。
+
+1.要有求知欲、好奇心，能够自我驱动； 
+2.良好的团队合作意识，能和团队打好配合； 
+3.熟练掌握C、C++语法，深入理解其特性，掌握C++11/14/17特性更好； 
+4.熟悉常用数据结构和算法(比如AVL、Splay、BTree、堆、栈、单模式匹配、多模式匹配等)；
+5.熟练掌握SQL语言，能够对数据库、SQL进行基本的调优； 
+6.熟练掌握HTTP/HTTPS、理解TCP/IP等协议（会tcpdump、fiddler之类的数据捕获工具并有相应的分析经验）；
+7.良好的程序调试功底，能熟练使用GDB工具，能独立分析coredump并找出原因； 
+8.良好的软件抽象能力，熟悉常见的设计模式和UML，掌握领域驱动设计为佳。有复杂B端系统经验为佳。
+1、本科以上计算机或相关专业，具备Unix/Linux下C/C++/Java/Go其中至少一门语言5年以上开发经验；
+2、精通分布式、海量系统的设计与开发；
+3、熟悉网络基础知识及架构，了解TCP/IP等常见网络协议，具备良好的成本意识；
+4、熟悉前沿的相似检索或推理引擎技术，了解最新的行业动态，在海量检索或者AI工程领域具备一定影响力；
+本科或以上计算机相关专业；
+3年以上游戏开发经验，参与过游戏AI系统的开发；
+基础扎实，编码过关，熟悉常用的算法和数据结构，熟练掌握C/C++、Java、Python等至少一门编程语言；
+对机器学习、强化学习、深度学习、最优化理论等算法原理及其在互联网行业的应用有较深入的理解和浓厚的兴趣；
+熟悉游戏引擎架构，有 Unreal 开发经验优先；
+具备较强动手和快速学习能力。
+
+Requirements:
+
+• Passion for games and the technology that makes them come to life
+• Excellent 3D math skills
+• Good understanding of modern rendering techniques, graphics hardware and rendering APIs
+• 2+ years of professional experience with C++ programming in the game industry
+• Expert C++ and HLSL knowledge and debugging skills
+• Good understanding of PC and/or console hardware bottlenecks and optimization strategies
+• Familiar with of multithreaded programming
+• Value lean, simple, efficient, well-tested code
+• Comfortable maintaining existing large codebase for multiple platforms     
+• Team player who works closely with other engineers to make sure our technology provides reliable and fast iteration for our content creators, and a fluid experience for our customers
+Preferred:
+• Experience working on AAA games
+• Shipped a title on PC and/or Consoles
+扎实的计算机科学基本功，尤其是数据结构、编译原理、操作系统等。
+熟练掌握C/C++或Java、python等编程语言。
+掌握编译优化、GC等领域知识和设计开发经验。
+（加分项）OpenJDK、CPython、深度学习编译器、V8、WebAssemby、gcc/llvm等经验。
+（加分项）掌握调试工具、系统性能分析工具和性能工程经验。
+（加分项）熟悉编译器的中间表达（IR），熟悉虚拟机内IR实现、内部执行流程，了解JIT编译器的实现等。
+1，本科及以上学历，3年以上游戏开发经验；
+2，扎实的计算机体系知识（操作系统，算法，数据结构，编译原理等）；
+3，过硬的编程能力（熟悉并熟练使用c++，对11，14，17等现代c++要足够熟悉，对各种编程语言都有经验或者了解）；
+4，优秀的软件架构设计能力（最好有开源软件相关经验）；
+5，出色的学习和技术研究应用能力, 良好的团队协作能力, 善于沟通, 敬业专注。
+职位要求：
+1、本科及以上学历，计算机、电子、通信等相关专业优先；
+2、熟练掌握 C/C++、JAVA，具备良好的代码架构能力，能够承担重点、难点的技术攻坚等；
+3、英语读写能力良好；
+4、熟练掌握Android或Windows操作系统，理解显示系统和窗口管理；
+5、深入理解共享内存和显存的知识，有图形渲染开发经验者优先；
+6、有良好的团队合作和沟通能力、具备较强的学习能力和解决问题能力；
+硕士及以上学历，精通一种或者多种软件开发语言（C/C++、Python、Go等），五年及以上系统软件或者平台软件开发经验；或有前端开发经验；
+有开源linux社区经验者优先；
+有系统开发工具经验优先，比如obs；
+对新技术敏感，求知欲强，能快速学习并具备较强的技术领悟能力；
+有强烈的上进心和责任感；具有良好的逻辑思维、语言表达能沟通力及团队协作精神。
+1、具备2年以上开发经验，本科以上学历；
+2、至少精通1门开发语言：Python、C/C++、Go；
+3、熟悉Linux开发环境，熟悉MYSQL或其他大型数据库，熟悉Web开发框架优先；
+4、有运维自动化、监控系统、发布系统、运营支撑系统等开发经验者优先；
+5、有海量数据处理、机器学习相关开发经验者优先；
+6、具有良好的学习能力、沟通能力、团队合作意识；
+7、强烈的责任心与主动性，对所负责工作有owner意识，并能自我驱动成长。 
