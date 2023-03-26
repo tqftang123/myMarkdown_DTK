@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/default.md</file>
+        <file>resources/index.html</file>
+        <file>resources/3rdparty/markdown.css</file>
+        <file>resources/3rdparty/marked.js</file>
+        <file>resources/3rdparty/qwebchannel.js</file>
+    </qresource>
+</RCC>
