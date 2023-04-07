@@ -11,6 +11,7 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QCloseEvent>
+#include <QInputDialog>
 
 DWIDGET_USE_NAMESPACE
 
@@ -65,14 +66,26 @@ void MainWindow::initMenu()
 //            menu->addAction("打开");
 //            menu->addAction("保存");
 //            menu->addAction("另存为");
+
+            QAction *openFile=new QAction("打开");
+
             //创建菜单项并连接信号与槽
-            connect(menu->addAction("打开"), &QAction::triggered, this, &MainWindow::onFileOpen);
+            //connect(menu->addAction("打开"), &QAction::triggered, this, &MainWindow::onFileOpen);
+           menu->addAction(openFile);
+           connect(openFile,&QAction::triggered, this, &MainWindow::onFileOpen);
+
+           //快捷键的设置
+           //openFile->setShortcut(QKeySequence("Qt::CTRL+Qt::Key_O."));
+           //openFile->setShortcut(tr("ctrl+s"));
+
             connect(menu->addAction("新建"), &QAction::triggered, this, &MainWindow::onFileNew);
             connect(menu->addAction("保存"), &QAction::triggered, this, &MainWindow::onFileSave);
             connect(menu->addAction("另存为"), &QAction::triggered, this, &MainWindow::onFileSaveAs);
 
+
+
             titlebar->menu()->addAction("快捷键");
-            titlebar->menu()->addAction("帮助");
+            titlebar->menu()->addAction("关于");
             titlebar->menu()->addAction("markdown指南");
 
 //           QMenu *menu = titlebar->menu()->addMenu("sub-menu");
@@ -99,12 +112,73 @@ void MainWindow::initMenu()
 
 
         DButtonBox *buttonBox = new DButtonBox(titlebar);
-        buttonBox->setFixedWidth(370);
-        buttonBox->setButtonList({new DButtonBoxButton("用户"), new DButtonBoxButton("新建笔记本"),new DButtonBoxButton("新建笔记"),new DButtonBoxButton("导入"),new DButtonBoxButton("导出")}, true);
+        buttonBox->setFixedWidth(420);
+        DButtonBoxButton *db1=new DButtonBoxButton("用户");
+        //DButtonBoxButton *db66=new DButtonBoxButton("|");
+        DButtonBoxButton *db2=new DButtonBoxButton("新建笔记本");
+        DButtonBoxButton *db3=new DButtonBoxButton("新建笔记");
+        //DButtonBoxButton *db77=new DButtonBoxButton("|");
+        DButtonBoxButton *db4=new DButtonBoxButton("编辑");
+        DButtonBoxButton *db5=new DButtonBoxButton("预览");
+        DButtonBoxButton *db6=new DButtonBoxButton("导出");
+
+        //buttonBox->setButtonList({new DButtonBoxButton("用户"), new DButtonBoxButton("新建笔记本"),new DButtonBoxButton("新建笔记"),new DButtonBoxButton("导入"),new DButtonBoxButton("导出")}, true);
+        buttonBox->setButtonList({db1,db2 ,db3,db4,db5,db6}, true);
+
+        //buttonBox->setButtonList({db1,db66,db2 ,db3,db77,db4,db5}, true);
+
         buttonBox->setId(buttonBox->buttonList().at(0), 0);
         buttonBox->setId(buttonBox->buttonList().at(1), 1);
         titlebar->addWidget(buttonBox);
 
+        connect(db3,&DButtonBoxButton::clicked,this,[=](){
+            //现在是指定了目录和文件名的，可以通过弹出对话框来让用户进行选择，也可默认添加到当前目录结构下，文件名还是需要用户指定的
+QString path=QFileDialog::getExistingDirectory(this,tr("选择创建文件路径"),"../");
+QString sName = QInputDialog::getText(this,
+                                         "QInputdialog_Name",
+                                         "请输入要创建的笔记名称",
+                                         QLineEdit::Normal,
+                                         "abc"
+                                         );
+            w->creatFile(path,sName+".md");
+            w->treeViewChage();
+w->fileSave();
+        });
+
+        connect(db2,&DButtonBoxButton::clicked,this,[=](){
+            //现在是指定了目录和文件名的，可以通过弹出对话框来让用户进行选择，也可默认添加到当前目录结构下，文件名还是需要用户指定的
+
+            QString path=QFileDialog::getExistingDirectory(this,tr("选择创建文件路径"),"../");
+            QString sName = QInputDialog::getText(this,
+                                                     "QInputdialog_Name",
+                                                     "请输入要创建的笔记本名称",
+                                                     QLineEdit::Normal,
+                                                     "abc"
+                                                     );
+            w->creatDir(path,sName);
+w->treeViewChage();
+        });
+
+
+
+        connect(db4,&DButtonBoxButton::clicked,this,[=](){
+            w->edite();
+        });
+        connect(db5,&DButtonBoxButton::clicked,this,[=](){
+            w->view();
+        });
+        connect(db6,&DButtonBoxButton::clicked,this,[=](){
+            QString fileName;
+            QString path=QFileDialog::getExistingDirectory(this,tr("选择导出文件保存路径"),"../");
+            QString sName = QInputDialog::getText(this,
+                                                     "QInputdialog_Name",
+                                                     "请输入导出文件保存的文件名",
+                                                     QLineEdit::Normal,
+                                                     "filename"
+                                                     );
+            fileName=path+"/"+sName+".pdf";
+            w->coutPdf(fileName);
+        });
 
 }
 

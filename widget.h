@@ -13,6 +13,7 @@
 #include <DDialog>
 #include <DButtonBox>
 #include <DTitlebar>
+#include <QDirModel>
 
 #include "document.h"
 
@@ -41,15 +42,42 @@ public:
     void fileSave();
     void fileSaveAs();
 
+    //更新文件目录结构
+    void treeViewChage();
+    //创建文件
+    void creatFile(const QString path,const QString suffix);
+    void creatDir(const QString path,const QString name);
+
+    //编辑、预览的切换
+    void view();
+    void edite();
+    //导出为PDF格式
+    void coutPdf(QString fileName);
+
 private slots:
-    void on_view_clicked();
-    void on_edite_clicked();
+
+
+    void on_bold_clicked();
+
+    void on_treeView_clicked(const QModelIndex &index);
+
+    void on_italic_clicked();
+
+    void on_strickout_clicked();
+
+    void on_list_ordered_clicked();
+
+    void on_list_unordered_clicked();
+
+    void on_table_clicked();
 
 private:
     Ui::Widget *ui;
 //    DLabel *lab;
     QString m_filePath;
     Document m_content;
+
+    QDirModel *model;
 
 };
 

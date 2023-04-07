@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
     MainWindow w;
     //Widget *wc=new Widget(&w);
 
+
+
     w.show();
 
     return a.exec();
