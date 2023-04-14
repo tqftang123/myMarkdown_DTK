@@ -12,6 +12,8 @@
 #include <QMessageBox>
 #include <QCloseEvent>
 #include <QInputDialog>
+#include <QMessageBox>
+
 
 DWIDGET_USE_NAMESPACE
 
@@ -76,17 +78,37 @@ void MainWindow::initMenu()
 
            //快捷键的设置
            //openFile->setShortcut(QKeySequence("Qt::CTRL+Qt::Key_O."));
-           //openFile->setShortcut(tr("ctrl+s"));
+           //openFile->setShortcut(tr("ctrl+o"));
 
             connect(menu->addAction("新建"), &QAction::triggered, this, &MainWindow::onFileNew);
             connect(menu->addAction("保存"), &QAction::triggered, this, &MainWindow::onFileSave);
             connect(menu->addAction("另存为"), &QAction::triggered, this, &MainWindow::onFileSaveAs);
 
+            //titlebar->menu()->addAction("markdown指南");
+            connect(titlebar->menu()->addAction("markdown指南"), &QAction::triggered, this, [&](){
+                w->openFile(":/markdown_guide.md");
+                w->view();
+            });
+
+            //该软件如何使用的指南，用户使用手册
+             titlebar->menu()->addAction("用户使用手册");
 
 
-            titlebar->menu()->addAction("快捷键");
-            titlebar->menu()->addAction("关于");
-            titlebar->menu()->addAction("markdown指南");
+             connect(titlebar->menu()->addAction("切换目录路径"), &QAction::triggered, this, [&](){
+QString path=QFileDialog::getExistingDirectory(this,tr("选择创建文件路径"),"../");
+w->changePath(path);
+             });
+
+
+            //titlebar->menu()->addAction("关于");
+            connect(titlebar->menu()->addAction("关于"), &QAction::triggered, this, [&](){
+                QString dlgTitle = "关于对话框";
+                QString strInfo = "该项目为markdown文本编辑器，开发小组成员有：";
+                QMessageBox::about(this,dlgTitle,strInfo);
+
+            });
+
+
 
 //           QMenu *menu = titlebar->menu()->addMenu("sub-menu");
 //            connect(menu->addAction("show full screen"), &QAction::triggered, this, [this]() {
@@ -112,7 +134,7 @@ void MainWindow::initMenu()
 
 
         DButtonBox *buttonBox = new DButtonBox(titlebar);
-        buttonBox->setFixedWidth(420);
+        buttonBox->setFixedWidth(520);
         DButtonBoxButton *db1=new DButtonBoxButton("用户");
         //DButtonBoxButton *db66=new DButtonBoxButton("|");
         DButtonBoxButton *db2=new DButtonBoxButton("新建笔记本");
@@ -120,10 +142,12 @@ void MainWindow::initMenu()
         //DButtonBoxButton *db77=new DButtonBoxButton("|");
         DButtonBoxButton *db4=new DButtonBoxButton("编辑");
         DButtonBoxButton *db5=new DButtonBoxButton("预览");
-        DButtonBoxButton *db6=new DButtonBoxButton("导出");
+        DButtonBoxButton *db6=new DButtonBoxButton("导出到");
+        DButtonBoxButton *db7=new DButtonBoxButton("保存");
+        DButtonBoxButton *db8=new DButtonBoxButton("导入");
 
         //buttonBox->setButtonList({new DButtonBoxButton("用户"), new DButtonBoxButton("新建笔记本"),new DButtonBoxButton("新建笔记"),new DButtonBoxButton("导入"),new DButtonBoxButton("导出")}, true);
-        buttonBox->setButtonList({db1,db2 ,db3,db4,db5,db6}, true);
+        buttonBox->setButtonList({db1,db2 ,db3,db7,db4,db5,db6,db8}, true);
 
         //buttonBox->setButtonList({db1,db66,db2 ,db3,db77,db4,db5}, true);
 
@@ -134,29 +158,57 @@ void MainWindow::initMenu()
         connect(db3,&DButtonBoxButton::clicked,this,[=](){
             //现在是指定了目录和文件名的，可以通过弹出对话框来让用户进行选择，也可默认添加到当前目录结构下，文件名还是需要用户指定的
 QString path=QFileDialog::getExistingDirectory(this,tr("选择创建文件路径"),"../");
-QString sName = QInputDialog::getText(this,
-                                         "QInputdialog_Name",
-                                         "请输入要创建的笔记名称",
-                                         QLineEdit::Normal,
-                                         "abc"
-                                         );
-            w->creatFile(path,sName+".md");
-            w->treeViewChage();
-w->fileSave();
+if(path!=nullptr)
+{
+    QString sName = QInputDialog::getText(this,
+                                             "QInputdialog_Name",
+                                             "请输入要创建的笔记名称",
+                                             QLineEdit::Normal,
+                                             "abc"
+                                             );
+    if(sName!=nullptr)
+    {
+        w->creatFile(path,sName+".md");
+        w->fileSave();
+        w->changePath(path);
+        w->openFile(path+"/"+sName+".md");
+    }
+    else {
+        QMessageBox::warning(this,tr("创建失败"),tr("未输入笔记名称"));
+    }
+}
+else {
+    QMessageBox::warning(this,tr("创建失败"),tr("未选择笔记存储路径"));
+}
+
+
+
         });
 
         connect(db2,&DButtonBoxButton::clicked,this,[=](){
-            //现在是指定了目录和文件名的，可以通过弹出对话框来让用户进行选择，也可默认添加到当前目录结构下，文件名还是需要用户指定的
 
             QString path=QFileDialog::getExistingDirectory(this,tr("选择创建文件路径"),"../");
-            QString sName = QInputDialog::getText(this,
-                                                     "QInputdialog_Name",
-                                                     "请输入要创建的笔记本名称",
-                                                     QLineEdit::Normal,
-                                                     "abc"
-                                                     );
-            w->creatDir(path,sName);
-w->treeViewChage();
+            if(path!=nullptr)
+            {
+                QString sName = QInputDialog::getText(this,
+                                                         "QInputdialog_Name",
+                                                         "请输入要创建的笔记本名称",
+                                                         QLineEdit::Normal,
+                                                         "abc"
+                                                         );
+                if(sName!=nullptr)
+                {
+                    w->creatDir(path,sName);
+                    w->changePath(path+"/"+sName);
+                }
+                else {
+                    QMessageBox::warning(this,tr("创建失败"),tr("未输入笔记本名称"));
+                }
+            }
+            else {
+                QMessageBox::warning(this,tr("创建失败"),tr("未选择笔记本存储路径"));
+            }
+
         });
 
 
@@ -169,16 +221,82 @@ w->treeViewChage();
         });
         connect(db6,&DButtonBoxButton::clicked,this,[=](){
             QString fileName;
+            //选择 导出的文件路径
             QString path=QFileDialog::getExistingDirectory(this,tr("选择导出文件保存路径"),"../");
-            QString sName = QInputDialog::getText(this,
-                                                     "QInputdialog_Name",
-                                                     "请输入导出文件保存的文件名",
-                                                     QLineEdit::Normal,
-                                                     "filename"
-                                                     );
-            fileName=path+"/"+sName+".pdf";
-            w->coutPdf(fileName);
+            if(path!=nullptr)
+            {
+                //输入导出的文件名
+                QString sName = QInputDialog::getText(this,
+                                                         "QInputdialog_Name",
+                                                         "请输入导出文件保存的文件名",
+                                                         QLineEdit::Normal,
+                                                         "filename"
+                                                         );
+
+
+                if(sName!=nullptr)
+                {
+                    fileName=path+"/"+sName;
+
+                    // 创建一个询问框，并添加三个自定义按钮
+                        QMessageBox msgBox;
+                        msgBox.setText("请问导出文件为什么格式?");
+                        msgBox.addButton("pdf", QMessageBox::YesRole);
+                        msgBox.addButton("word", QMessageBox::NoRole);
+                        msgBox.addButton("pdf/word", QMessageBox::RejectRole);
+                        msgBox.exec();
+
+                        // 获取用户的选择，并显示相应的消息
+                        QAbstractButton *clickedButton = msgBox.clickedButton();
+                        if (msgBox.buttonRole(clickedButton) == QMessageBox::YesRole) {
+                            //QMessageBox::information(nullptr, "Answer", "pdf");
+                            w->coutPdf(fileName);
+                        } else if (msgBox.buttonRole(clickedButton) == QMessageBox::NoRole) {
+                            //QMessageBox::information(nullptr, "Answer", "word");
+                            w->coutWord(fileName);
+                        } else if (msgBox.buttonRole(clickedButton) == QMessageBox::RejectRole) {
+                            //QMessageBox::information(nullptr, "Answer", "pdf/word");
+                            w->coutPdf(fileName);
+                            w->coutWord(fileName);
+                        }
+                }
+                else {
+                    QMessageBox::warning(this,tr("导出失败"),tr("未输入导出文件名"));
+                }
+            }
+            else {
+                 QMessageBox::warning(this,tr("导出失败"),tr("未选择导出文件存储路径"));
+            }
+
+
+
+
+
+
+
         });
+
+        connect(db7,&DButtonBoxButton::clicked,this,[=](){
+            w->fileSave();
+        });
+
+        connect(db8,&DButtonBoxButton::clicked,this,[=](){
+//            QString path=QFileDialog::getExistingDirectory(this,tr("选择导入文件保存路径"),"../");
+//            w->cinWord(path);
+            QString path=QFileDialog::getOpenFileName(this,tr("选择导入文件保存路径"));
+             w->cinWord(path);
+        });
+
+        connect(db7,&DButtonBoxButton::clicked,this,[=](){
+            w->fileSave();
+        });
+
+
+
+//设置快捷键
+        db5->setShortcut(tr("ctrl+w"));
+        //ctrl+v可能用不起，因为ctrl+v本来是粘贴的意思。
+        db4->setShortcut(tr("ctrl+e"));
 
 }
 

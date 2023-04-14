@@ -49,4 +49,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     markdowneditor.qrc \
-    images.qrc
+    images.qrc \
+    guide.qrc

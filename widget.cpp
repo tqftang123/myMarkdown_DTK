@@ -11,25 +11,29 @@
 #include <QFileSystemModel>
 #include <QInputDialog>
 #include <QPageLayout>
+#include <QProcess>
+
+
+
 
 Widget::Widget(QWidget *parent) :
     DWidget(parent),
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-//    lab=new DLabel(this);
-//    lab->setText("Hello DTK");
 
+//如果我需要编辑和预览一左一右到话
 //QSplitter可调节两个窗口的大小
 //QSplitter *splitter=new QSplitter(ui->horizontalWidget);
 //splitter->addWidget(ui->editor);
 //splitter->addWidget(ui->preview);
-//splitter->setMinimumSize(this->height()*2,this->width());
+//splitter->setMinimumSize(this->height()*3,this->width());
 
     ui->editor->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
     ui->preview->setContextMenuPolicy(Qt::NoContextMenu);
 //编辑界面和预览界面的切换
     ui->preview->hide();
+
 
     //文本和html的链接，预览功能的实现
     PreviewPage *page = new PreviewPage(this);
@@ -44,7 +48,10 @@ Widget::Widget(QWidget *parent) :
 
 
 
+
+
     ui->preview->setUrl(QUrl("qrc:/resources/index.html"));
+    //ui->preview->setUrl(QUrl("qrc:/resources/index-1.html"));
 
     QFile defaultTextFile(":/resources/default.md");
     defaultTextFile.open(QIODevice::ReadOnly);
@@ -72,10 +79,14 @@ Widget::Widget(QWidget *parent) :
 //方法1：
         //QDirModel *model = new QDirModel();
     model = new QDirModel();
+
     ui->treeView->setModel(model);
-    ui->treeView->setRootIndex(model->index("/home/rootroot/t"));
+    //ui->treeView->setRootIndex(model->index("/home/rootroot/t"));
+    ui->treeView->setRootIndex(model->index("../"));
+
 
     m_filePath="/home/rootroot/t";
+
 
 //方法2：
 //    QFileSystemModel *model = new QFileSystemModel;
@@ -84,7 +95,7 @@ Widget::Widget(QWidget *parent) :
 //    ui->treeView->setModel(model);
 
 
-    //光标是否在屏幕上居中
+    //光标是否在屏幕上居中8
     ui->editor->setCenterOnScroll(true);
 
     //显示打开的文件路径
@@ -112,6 +123,35 @@ Widget::Widget(QWidget *parent) :
     ui->quote->setToolTip("引用");
     ui->strickout->setToolTip("删除线");
     ui->table->setToolTip("表格");
+
+    m_filePath="/home/rootroot/t/newFile.md";
+
+
+
+//ui->listView->setModel();
+    //QListView *listview = new QListView(this);       //创建QListView对象
+    //listview->setGeometry(50, 20, 100, 200);         //设置位置和大小
+
+//list在.h文件中定义了，因为我后续其它函数需要调用它
+//    list.append("苹果");
+
+    //使用数据列表创建数据显示模型
+    //QStringListModel *listmodel = new QStringListModel(list);
+    listmodel = new QStringListModel(list);
+    ui->listView->setModel(listmodel);                   //设置模型到listview上
+
+    ui->listView->setMovement(QListView::Free);          //设置数据可以自由拖动
+    ui->listView->setSpacing(2);                         //设置数据的间距
+    ui->listView->setFlow(QListView::LeftToRight);
+
+    connect(ui->listView, SIGNAL(clicked(const QModelIndex)),
+                this, SLOT(slotClicked(const QModelIndex)));
+//目前只能从文件结构这边打开多文件，open那边还没有写，删除某个打开的文件还没有写
+
+
+
+    //快捷键的设置,加粗的快捷键
+    ui->bold->setShortcut(tr("ctrl+b"));
 }
 
 Widget::~Widget()
@@ -124,19 +164,72 @@ Widget::~Widget()
 
 void Widget::openFile(const QString &path)
 {
-    QFile f(path);
+    m_filePath = path;
+
+//    QFile f(path);
+//    if (!f.open(QIODevice::ReadOnly)) {
+//        QMessageBox::warning(this, windowTitle(),
+//                             tr("Could not open file %1: %2").arg(
+//                                 QDir::toNativeSeparators(path), f.errorString()));
+//        return;
+//    }
+
+////    ui->editor->setPlainText(f.readAll());
+
+    //更新打开的文件路径
+    ui->label->setText(path);
+
+    QFileInfo fileInfo = QFileInfo(path);
+    //文件名
+    QString fileName = fileInfo.fileName();
+    m_fileName=fileInfo.fileName();
+    //设置同一个文件只能打开一次
+    int flage=0;
+    int i=0;
+for(i=0;i<list.size();i++)
+{
+if(list[i]==fileName&&listUrl[i]==m_filePath)
+{
+    flage=1;
+//    openFile(listUrl[i]);
+    QFile f(listUrl[i]);
     if (!f.open(QIODevice::ReadOnly)) {
         QMessageBox::warning(this, windowTitle(),
                              tr("Could not open file %1: %2").arg(
                                  QDir::toNativeSeparators(path), f.errorString()));
         return;
     }
-    m_filePath = path;
-    ui->editor->setPlainText(f.readAll());
-    //statusBar()->showMessage(tr("Opened %1").arg(QDir::toNativeSeparators(path)));
 
-    //更新打开的文件名
-    ui->label->setText(path);
+    ui->editor->setPlainText(f.readAll());
+
+    //记录当前打开文件是第几个
+    current=i;
+}
+}
+
+if(flage==0)
+{
+list.append(fileName);
+listUrl.append(m_filePath);
+
+//记录当前打开文件是第几个
+current=i;
+//更新打开文件的list列表
+this->updataList();
+
+QFile f(path);
+if (!f.open(QIODevice::ReadOnly)) {
+    QMessageBox::warning(this, windowTitle(),
+                         tr("Could not open file %1: %2").arg(
+                             QDir::toNativeSeparators(path), f.errorString()));
+    return;
+}
+
+ui->editor->setPlainText(f.readAll());
+
+}
+
+
 }
 
 
@@ -264,6 +357,8 @@ void Widget::creatDir(const QString path,const QString name)
 
 void Widget::view()
 {
+    ui->preview->setUrl(QUrl("qrc:/resources/index.html"));
+
     ui->editor->hide();
     ui->preview->show();
 
@@ -293,6 +388,11 @@ void Widget::view()
     ///////////保存为PDF
     //ui->preview->page()->printToPdf(QStringLiteral("/home/rootroot/t/12.pdf"));
 
+
+
+
+
+
 }
 
 void Widget::edite()
@@ -321,25 +421,114 @@ void Widget::edite()
     ui->table->setEnabled(true);
 
 
+////
+    this->changPrive();
 }
 
 
 
  void Widget::coutPdf(QString fileName )
  {
-     ///////////保存为PDF
+     ///////////保存为PDF,方法一，ui->preview->page()->printToPdf(fileName);
      //QString fileName="/home/rootroot/t/12.pdf";
      //ui->preview->page()->printToPdf(QStringLiteral("/home/rootroot/t/12.pdf"));
-     ui->preview->page()->printToPdf(fileName);
+
+     this->edite();
+     //改变文件结构那个，有点问题，只有点击编辑之后再点导出就是没有文件结构的，在预览界面进行导出就有文件结构
+     this->changPrive();
+     ui->preview->page()->printToPdf(fileName+".pdf");
  }
+
+
+ void Widget::changPrive()
+ {
+     ui->preview->setUrl(QUrl("qrc:/resources/index-1.html"));
+     emit(ui->editor->textChanged());
+     ui->preview->update();
+
+ }
+
+ //导出为Word格式的文件
+ void Widget::coutWord(QString fileName)
+ {
+     //////导出为word文件
+//     QString docxFile="/home/rootroot/t/word-1.docx";
+//     QString mdFile="/home/rootroot/t/11.md";
+
+
+
+          QString docxFile=fileName+".docx";
+          QString mdFile=m_filePath;
+
+         QString program = "pandoc";
+         QStringList arguments;
+         arguments << "-f" << "markdown" << "-t" << "docx" << "-o" << docxFile << mdFile;
+
+
+         QProcess process;
+         process.start(program, arguments);
+         process.waitForFinished();
+
+         if (process.exitCode() != 0) {
+             qWarning() << "Error converting docx to markdown:" << process.errorString();
+         }
+
+ }
+
+
+ void Widget::cinWord(QString filePath)
+ {
+     QString mdFile="/home/rootroot/t/new.md";
+     QString program = "pandoc";
+     QStringList arguments;
+
+ //docx导出为md文件
+     arguments << "-f" << "docx" << "-t" << "markdown" << "-o" << mdFile << filePath;
+
+
+     QProcess process;
+     process.start(program, arguments);
+     process.waitForFinished();
+
+     if (process.exitCode() != 0) {
+         qWarning() << "Error converting docx to markdown:" << process.errorString();
+         }
+
+     this->openFile("/home/rootroot/t/new.md");
+//     QFile defaultTextFile("/home/rootroot/t/new.md");
+//     defaultTextFile.open(QIODevice::ReadOnly);
+//     ui->editor->setPlainText(defaultTextFile.readAll());
+ }
+
+
+ void Widget::changePath(QString path)
+ {
+      ui->treeView->setRootIndex(model->index(path));
+ }
+
+
+ //更新打开文件的list列表
+ void Widget::updataList()
+ {
+     //更新数据
+     listmodel = new QStringListModel(list);
+     ui->listView->setModel(listmodel);                   //设置模型到listview上
+
+     ui->listView->setMovement(QListView::Free);          //设置数据可以自由拖动
+     ui->listView->setSpacing(2);                         //设置数据的间距
+     ui->listView->setFlow(QListView::LeftToRight);
+ }
+
 
 //目录被点击之后
 void Widget::on_treeView_clicked(const QModelIndex &index)
 {
-    //m_filePath=model->filePath(index);
+    m_filePath=model->filePath(index);
+
     QFileInfo fileInfo = QFileInfo(model->filePath(index));
     //文件名
     QString fileName = fileInfo.fileName();
+    m_fileName=fileInfo.fileName();
     //文件后缀
     QString fileSuffix = fileInfo.suffix();
     //绝对路径
@@ -350,12 +539,55 @@ void Widget::on_treeView_clicked(const QModelIndex &index)
     {
         this->openFile(model->filePath(index));
 
-        //更新打开的文件名
-        ui->label->setText(fileName);
+//        //更新打开的文件路径
+//        ui->label->setText(m_filePath);
+//        //设置同一个文件只能打开一次
+//        int flage=0;
+//        int i=0;
+//for(i=0;i<list.size();i++)
+//{
+//    if(list[i]==fileName&&listUrl[i]==m_filePath)
+//    {
+//        flage=1;
+//        openFile(listUrl[i]);
+//        //记录当前打开文件是第几个
+//        current=i;
+//    }
+//}
+
+//if(flage==0)
+//{
+//    list.append(fileName);
+//    listUrl.append(m_filePath);
+
+////记录当前打开文件是第几个
+//current=i;
+////更新打开文件的list列表
+//    this->updataList();
+//}
+
+
+    }
+    //当点击的不是md文件时，提示当前程序只允许打开md文件
+    else {
+        QMessageBox::warning(this, tr("Error"), tr("当前程序只允许打开md文件!!!"));
     }
 }
 
 
+void Widget::slotClicked(const QModelIndex &index)
+{
+    for(int i=0;i<list.size();i++)
+    {
+        if(list[i]==index.data())
+        {
+            openFile(listUrl[i]);
+            //记录当前打开文件是第几个
+            current=i;
+            break;
+        }
+    }
+}
 
 //加粗按钮被点击后
 void Widget::on_bold_clicked()
@@ -430,4 +662,82 @@ void Widget::on_table_clicked()
 //    {
 //        ui->editor->moveCursor(QTextCursor::Left,QTextCursor::MoveAnchor);
 //    }
+}
+
+
+
+void Widget::on_dome_clicked()
+{
+    this->changePath("/home/rootroot/t/untitled/dome/");
+    this->openFile("/home/rootroot/t/untitled/dome//dome-day.md");
+}
+
+void Widget::on_close_clicked()
+{
+    //已经修改的文件在关闭时自动保存
+    if(isModified())
+    {
+        this->fileSave();
+    }
+
+
+    list.removeAt(current);
+      listUrl.removeAt(current);
+      //更新打开文件的list列表
+      this->updataList();
+      //打开前一个文件
+          if(current>0)
+          {
+              this->openFile(listUrl[current-1]);
+              m_filePath=listUrl[current-1];
+          }
+          //当关闭的是第一个文件时，如果list中还有文件，则打开第0个（因为此时current=0）
+          else if(list.length()>0)
+      {
+          this->openFile(listUrl[current]);
+          m_filePath=listUrl[current];
+      }
+          //list中没有文件时，新建一个文件
+      else
+      {
+          this->fileNew();
+          m_filePath="";
+      }
+
+}
+
+
+void Widget::on_closeAll_clicked()
+{
+
+
+    list.clear();
+    listUrl.clear();
+    //更新打开文件的list列表
+    this->updataList();
+    this->fileNew();
+    m_filePath="";
+}
+
+void Widget::on_content_clicked()
+{
+    QString path=QFileDialog::getExistingDirectory(this,tr("选择打开的目录路径"),"../");
+    this->changePath(path);
+}
+
+//专注模式，全屏模式
+void Widget::on_concentrated_clicked()
+{
+    ui->treeView->hide();
+    ui->content->hide();
+    ui->log->hide();
+    ui->dome->hide();
+}
+//正常模式
+void Widget::on_normal_clicked()
+{
+    ui->treeView->show();
+    ui->content->show();
+    ui->log->show();
+    ui->dome->show();
 }

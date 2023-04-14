@@ -25,25 +25,25 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout_6">
+  <layout class="QHBoxLayout" name="horizontalLayout_4">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QToolButton" name="toolButton">
+      <widget class="QToolButton" name="content">
        <property name="text">
-        <string>导航</string>
+        <string>目录</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="toolButton_2">
+      <widget class="QToolButton" name="log">
        <property name="text">
-        <string>历史</string>
+        <string>日志</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="toolButton_3">
+      <widget class="QToolButton" name="dome">
        <property name="text">
         <string>模板库</string>
        </property>
@@ -83,6 +83,16 @@
    </item>
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QListView" name="listView">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
@@ -169,23 +179,81 @@
          </property>
         </widget>
        </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
       </layout>
      </item>
      <item>
-      <widget class="QLabel" name="label">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>TextLabel</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="close">
+         <property name="text">
+          <string>关闭</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="closeAll">
+         <property name="text">
+          <string>关闭全部</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QToolButton" name="concentrated">
+         <property name="text">
+          <string>专注模式</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="normal">
+         <property name="text">
+          <string>正常模式</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
       <widget class="QWidget" name="horizontalWidget" native="true">
@@ -209,7 +277,7 @@
            <widget class="QWebEngineView" name="preview">
             <property name="minimumSize">
              <size>
-              <width>200</width>
+              <width>0</width>
               <height>0</height>
              </size>
             </property>
