@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+  <link id="cssFileId"  rel="stylesheet" type="text/css" href="3rdparty/markdown.css">
+  <link rel="stylesheet" type="text/css" href="3rdparty/default.min.css">
+  <script src="3rdparty/marked.js"></script>
+  <script src="3rdparty/highlight.min.js"></script>
+
+  <script src="3rdparty/qwebchannel.js"></script>
+
+</head>
+<body>
+    主题：<select id="theme" onchange="changeCSS(this)">
+            <option value="default">默认主题</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+    </select>
+
+  <div id="placeholder"></div>
+
+<div id="toc">
+     <div>
+          <h3 id="tocH">目录</h3>
+     </div>
+     <hr>
+     <div id="cataLog">
+
+     </div>
+ </div>
+
+  <script>
+  'use strict';
+
+  var placeholder = document.getElementById('placeholder');
+  var cataLog = document.getElementById('cataLog');
+  var content_text;
+
+  var updateText = function(text) {
+      placeholder.innerHTML = marked(text);
+<!--      console.log(marked(text));-->
+
+    const titleTag = ["H1","H2","H3","H4","H5","H6"];
+    let titles = [];
+
+    placeholder.childNodes.forEach((e,index)=>{
+        if (titleTag.includes(e.nodeName)){
+            const id = "header-"+index;
+            e.setAttribute("id",id);
+        }
+    });
+
+      content_text = marked(text);
+      cataLog.innerHTML = content_text;
+
+
+        cataLog.childNodes.forEach((e,index)=>{
+            if (titleTag.includes(e.nodeName)){
+                const id = "header-"+index;
+                e.setAttribute("id",id);
+                titles.push({
+                    id:id,
+                    title:e.innerHTML,
+                    level:Number(e.nodeName.substring(1,2)),
+                    nodeName:e.nodeName
+                });
+            }
+        });
+        const catalog=titles;
+        cataLog.innerHTML = null;
+
+        var index;
+        for(index in catalog){
+            document.getElementById('cataLog').innerHTML+="<li id='tocLi' style='padding-left:"
+            + (catalog[index].level*22-22) + "px;'>"
+            + "<a onclick='changeBackground(event)' id='tocid' href='#" + catalog[index].id +"'>"
+            +catalog[index].title+"</a></li>"
+        }
+        hljs.highlightAll();
+
+  }
+
+  new QWebChannel(qt.webChannelTransport,
+    function(channel) {
+
+<!--      获取QT注册的对象-->
+        var content=channel.objects.content;
+      updateText(content.text);
+      content.textChanged.connect(updateText);
+    }
+  );
+
+function changeBackground(event) {
+    var targetId = event.target.getAttribute("href"); // 获取目标标签的ID
+    var target = document.querySelector(targetId); // 获取目标标签元素
+    var originalColor = target.style.backgroundColor; // 保存原来的背景颜色
+
+    target.style.backgroundColor = "#e9e9e9"; // 改变背景颜色为黄色
+    setTimeout(function() {
+        target.style.backgroundColor = originalColor; // 0.5s后恢复原来的背景颜色
+    }, 500);
+}
+
+//主题更换 更换不同的css文件
+function changeCSS(select){
+    var value = select.value;
+    var cssFile = document.getElementById("cssFileId");
+    if(value === "default"){
+        cssFile.href = "3rdparty/markdown.css";
+    }
+    if(value === "red"){
+        cssFile.href = "3rdparty/markdownRed.css"
+    }
+    if(value === "blue"){
+        cssFile.href = "3rdparty/markdownBlue.css"
+    }
+}
+
+
+  </script>
+
+</body>
+</html>

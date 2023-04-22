@@ -152,7 +152,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="toolButton_13">
+        <widget class="QToolButton" name="code">
          <property name="text">
           <string>代码</string>
          </property>
@@ -173,7 +173,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="toolButton_14">
+        <widget class="QToolButton" name="dividing_line">
          <property name="text">
           <string>分隔线</string>
          </property>
@@ -220,13 +220,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="closeAll">
-         <property name="text">
-          <string>关闭全部</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <spacer name="horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -240,16 +233,16 @@
         </spacer>
        </item>
        <item>
-        <widget class="QToolButton" name="concentrated">
+        <widget class="QToolButton" name="normal">
          <property name="text">
-          <string>专注模式</string>
+          <string>普通模式</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="normal">
+        <widget class="QToolButton" name="concentrated">
          <property name="text">
-          <string>正常模式</string>
+          <string>专注模式</string>
          </property>
         </widget>
        </item>

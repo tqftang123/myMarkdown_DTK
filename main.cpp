@@ -9,12 +9,8 @@ int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     DApplication a(argc, argv);
-    //DMainWindow w;
     MainWindow w;
-    //Widget *wc=new Widget(&w);
-
-
-
+    w.showMaximized();
     w.show();
 
     return a.exec();

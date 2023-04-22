@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>markdown_guide.md</file>
+        <file>resources/User.md</file>
     </qresource>
 </RCC>

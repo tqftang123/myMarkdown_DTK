@@ -13,6 +13,7 @@
 #include <DLabel>
 #include <DScrollArea>
 #include "widget.h"
+#include "gitsync.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -45,6 +46,8 @@ private:
     Widget *w;
     Ui::MainWindow *ui;
 
+
+    QString url;
 
 
 };
