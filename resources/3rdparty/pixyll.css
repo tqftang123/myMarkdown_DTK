@@ -1,0 +1,189 @@
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+#toc{
+    width: 20%;
+    overflow: auto;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    z-index: 100;
+    background-color:#f5f6f7;
+}
+#cataLog{
+    height: 800px;
+}
+#tocLi{
+    text-decoration:none;
+    list-style:none;
+    margin:10px;
+}
+#tocLi:hover{
+    background-color: #E7E5DC;
+}
+#tocid{
+    text-decoration: none;
+    font-size:18px;
+    font-weight: 500;
+    color:black;
+}
+#tocid:hover{
+    color: #fc5531;
+}
+#tocH{
+    color:black;
+}
+#theme{
+    width: 20%;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+}
+#contentDiv{
+    display:flex;
+    justify-content:center;
+}
+#placeholder{
+    width:75%;
+}
+
+h1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+ {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", 'Segoe UI Emoji', Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+/*        margin: 0 300px;*/
+        max-width: 960px;
+}
+
+img {
+        /*width: auto;
+        max-width: 100%;*/
+
+    max-width:100%;
+    height:auto;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code  {
+	color: #7a7a7a;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}

@@ -8,7 +8,18 @@
         <file>resources/index-1.html</file>
         <file>resources/3rdparty/default.min.css</file>
         <file>resources/3rdparty/highlight.min.js</file>
-        <file>resources/3rdparty/markdownBlue.css</file>
-        <file>resources/3rdparty/markdownRed.css</file>
+        <file>resources/3rdparty/github-markdown.css</file>
+        <file>resources/3rdparty/vs.min.css</file>
+        <file>resources/3rdparty/vue.css</file>
+        <file>resources/3rdparty/pixyll.css</file>
+        <file>resources/3rdparty/whitey.css</file>
+        <file>resources/3rdparty/mono-blue.min.css</file>
+        <file>resources/3rdparty/a11y-light.min.css</file>
+        <file>resources/3rdparty/github.min.css</file>
+        <file>resources/welcome .md</file>
+        <file>template/demo-day.md</file>
+        <file>template/demo-todolist.md</file>
+        <file>template/skill-document.md</file>
+        <file>template/vita.md</file>
     </qresource>
 </RCC>

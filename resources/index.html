@@ -2,8 +2,8 @@
 <html lang="en">
 <meta charset="utf-8">
 <head>
-  <link id="cssFileId"  rel="stylesheet" type="text/css" href="3rdparty/markdown.css">
-  <link rel="stylesheet" type="text/css" href="3rdparty/default.min.css">
+  <link id="cssThemeFileId"  rel="stylesheet" type="text/css" href="3rdparty/vue.css">
+  <link id="cssCodeFileId"  rel="stylesheet" type="text/css" href="3rdparty/vs.min.css">
   <script src="3rdparty/marked.js"></script>
   <script src="3rdparty/highlight.min.js"></script>
 
@@ -11,23 +11,30 @@
 
 </head>
 <body>
-    主题：<select id="theme" onchange="changeCSS(this)">
-            <option value="default">默认主题</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-    </select>
 
-  <div id="placeholder"></div>
+<div>
+    <div id="contentDiv">
+        <div id="placeholder"></div>
+    </div>
 
-<div id="toc">
-     <div>
-          <h3 id="tocH">目录</h3>
+    <div id="theme">
+        预览主题：<select onchange="changeCSS(this)">
+                <option value="vue">Vue</option>
+                <option value="github">Github</option>
+                <option value="pixyll">Pixyll</option>
+                <option value="whitey">Whitey</option>
+                <option value="simple">Simple</option>
+        </select>
+    </div>
+
+    <div id="toc">
+         <div>
+              <h3 id="tocH">目录</h3>
+         </div>
+         <hr>
+         <div id="cataLog"></div>
      </div>
-     <hr>
-     <div id="cataLog">
-
-     </div>
- </div>
+</div>
 
   <script>
   'use strict';
@@ -95,7 +102,7 @@ function changeBackground(event) {
     var target = document.querySelector(targetId); // 获取目标标签元素
     var originalColor = target.style.backgroundColor; // 保存原来的背景颜色
 
-    target.style.backgroundColor = "#e9e9e9"; // 改变背景颜色为黄色
+    target.style.backgroundColor = "#e9e9e9"; // 改变背景颜色
     setTimeout(function() {
         target.style.backgroundColor = originalColor; // 0.5s后恢复原来的背景颜色
     }, 500);
@@ -104,15 +111,28 @@ function changeBackground(event) {
 //主题更换 更换不同的css文件
 function changeCSS(select){
     var value = select.value;
-    var cssFile = document.getElementById("cssFileId");
-    if(value === "default"){
-        cssFile.href = "3rdparty/markdown.css";
+    var cssThemeFile = document.getElementById("cssThemeFileId");
+    var cssCodeFile = document.getElementById("cssCodeFileId");
+
+    if(value === "vue"){
+        cssThemeFile.href = "3rdparty/vue.css";
+        cssCodeFile.href = "3rdparty/vs.min.css";
     }
-    if(value === "red"){
-        cssFile.href = "3rdparty/markdownRed.css"
+    if(value === "github"){
+        cssThemeFile.href = "3rdparty/github-markdown.css";
+        cssCodeFile.href = "3rdparty/github.min.css";
     }
-    if(value === "blue"){
-        cssFile.href = "3rdparty/markdownBlue.css"
+    if(value === "pixyll"){
+        cssThemeFile.href = "3rdparty/pixyll.css";
+        cssCodeFile.href = "3rdparty/a11y-light.min.css";
+    }
+    if(value === "whitey"){
+        cssThemeFile.href = "3rdparty/whitey.css";
+        cssCodeFile.href = "3rdparty/mono-blue.min.css";
+    }
+    if(value === "simple"){
+        cssThemeFile.href = "3rdparty/markdown.css";
+        cssCodeFile.href = "3rdparty/default.min.css";
     }
 }
 

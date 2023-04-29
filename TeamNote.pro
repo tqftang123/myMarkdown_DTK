@@ -3,7 +3,7 @@
 # Project created by QtCreator 2023-03-25T16:49:07
 #
 #-------------------------------------------------
-
+CONFIG -= qtquickcompiler
 QT       += core gui  dtkwidget
 QT += webenginewidgets webchannel
 

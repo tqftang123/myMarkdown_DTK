@@ -13,6 +13,7 @@
 #include <QPageLayout>
 #include <QProcess>
 #include <QTimer>
+#include <QResource>
 
 Widget::Widget(QWidget *parent) :
     DWidget(parent),
@@ -45,15 +46,21 @@ Widget::Widget(QWidget *parent) :
     ui->preview->setUrl(QUrl("qrc:/resources/index.html"));
     //ui->preview->setUrl(QUrl("qrc:/resources/index-1.html"));
 
-    QFile defaultTextFile(":/resources/default.md");
+    QFile defaultTextFile(":/resources/welcome .md");
     defaultTextFile.open(QIODevice::ReadOnly);
     ui->editor->setPlainText(defaultTextFile.readAll());
 
+    this->view();
 
     //展示目录结构
     //方法1：
     //QDirModel *model = new QDirModel();
-    model = new QDirModel();
+    model = new MyDirModel();
+
+    //只显示md文件
+    model->setFilter(QDir::Files | QDir::AllDirs | QDir::NoDotAndDotDot);
+    model->setNameFilters(QStringList{"*.md"});
+
     ui->treeView->setModel(model);
     ui->treeView->setRootIndex(model->index("./"));
     m_filePath="./new.md";
@@ -141,6 +148,8 @@ Widget::~Widget()
 
 void Widget::openFile(const QString &path)
 {
+    ui->close->show();
+
     m_filePath = path;
     //更新打开的文件路径
     ui->label->setText(path);
@@ -174,7 +183,7 @@ void Widget::openFile(const QString &path)
     {
         list.append(fileName);
         listUrl.append(m_filePath);
-        //////记录当前打开文件是第几个
+        //记录当前打开文件是第几个
         current=i;
         //更新打开文件的list列表
         this->updataList();
@@ -262,9 +271,10 @@ void Widget::fileSave_2()
     str << ui->editor->toPlainText();
     ui->editor->document()->setModified(false);
 
-   QMessageBox::information(this,"提示","保存成功");
-
-
+//   QMessageBox  messageBox=new QMessageBox::information(this,"提示","保存成功");
+    auto messageBox = new QMessageBox(QMessageBox::NoIcon, "提示", "保存成功", QMessageBox::Ok);
+       QTimer::singleShot(1000, messageBox, SLOT(close())); // 两秒后自动关闭该消息框
+       messageBox->exec();
 }
 
 
@@ -287,7 +297,9 @@ void Widget::fileSaveAs()
 
 void Widget::treeViewChage()
 {
-    model = new QDirModel();
+    model = new MyDirModel();
+    model->setFilter(QDir::Files | QDir::AllDirs | QDir::NoDotAndDotDot);
+    model->setNameFilters(QStringList{"*.md"});
     ui->treeView->setModel(model);
     ui->treeView->setRootIndex(model->index(path));
 }
@@ -408,7 +420,7 @@ void Widget::edite()
 
      this->edite();
      //改变文件结构那个，有点问题，只有点击编辑之后再点导出就是没有文件结构的，在预览界面进行导出就有文件结构
-     //this->changPrive();
+     this->changPrive();
      ui->preview->page()->printToPdf(fileName+".pdf");
  }
 
@@ -442,7 +454,7 @@ void Widget::edite()
 
  void Widget::cinWord(QString filePath)
  {
-     QString mdFile="./word.md";
+     QString mdFile=path+"/word.md";
      QString program = "pandoc";
      QStringList arguments;
 
@@ -458,13 +470,17 @@ void Widget::edite()
          //qWarning() << "Error converting docx to markdown:" << process.errorString();
      }
 
-     this->openFile("./word.md");
+     this->openFile(path+"/word.md");
  }
 
 
  void Widget::changePath(QString path)
  {
-      model = new QDirModel();
+      model = new MyDirModel();
+
+      model->setFilter(QDir::Files | QDir::AllDirs | QDir::NoDotAndDotDot);
+      model->setNameFilters(QStringList{"*.md"});
+
       ui->treeView->setModel(model);
       ui->treeView->setRootIndex(model->index(path));
       this->path=path;
@@ -597,16 +613,10 @@ void Widget::on_table_clicked()
     ui->editor->insertPlainText(tr("|  表头   | 表头  | \n|  ----  | ----  |\n| 单元格  | 单元格 |\n| 单元格  | 单元格 |"));
 }
 
-
-
-void Widget::on_dome_clicked()
-{
-    this->changePath("/home/rootroot/t/untitled/dome/");
-    this->openFile("/home/rootroot/t/untitled/dome//dome-day.md");
-}
-
 void Widget::on_close_clicked()
 {
+    /////////找到bug了，点击关闭第2个文件会出错，（下标为1）
+
     //已经修改的文件在关闭时自动保存
 //    if(isModified())
 //    {
@@ -616,32 +626,44 @@ void Widget::on_close_clicked()
 /////
     list.removeAt(current);
     listUrl.removeAt(current);
+//list[current]="";
+//listUrl[current]="";
     //更新打开文件的list列表
       this->updataList();
-    //打开前一个文件
-    if(current>0)
+////////虽然不知道为什么有1这个bug，但是，单独拿出来判断一下就可以了
+    if(current==1)
     {
-        this->openFile(listUrl[current-1]);
-        m_filePath=listUrl[current-1];
+        this->openFile(listUrl[0]);
+        m_filePath=listUrl[0];
+        current=0;
+    }
+    else {
+        //打开前一个文件
+        if(current>0)
+        {
+            this->openFile(listUrl[current-1]);
+            m_filePath=listUrl[current-1];
+    //        current=current-1;
+        }
+        //当关闭的是第一个文件时，如果list中还有文件，则打开第0个（因为此时current=0）
+        else if(list.length()>0)
+        {
+            this->openFile(listUrl[0]);
+            m_filePath=listUrl[0];
+        }
+        //list中没有文件时，新建一个文件
+        else
+        {
+            //this->fileNew();
+            //m_filePath="";
+            ui->editor->setPlainText(tr(""));
+            //ui->editor->document()->setModified(false);
+            ui->label->setText("");
+            ui->close->hide();
+        }
+    }
 
-    }
-    //当关闭的是第一个文件时，如果list中还有文件，则打开第0个（因为此时current=0）
-    else if(list.length()>0)
-    {
-        this->openFile(listUrl[current]);
-        m_filePath=listUrl[current];
-    }
-    //list中没有文件时，新建一个文件
-    else
-    {
-        //this->fileNew();
-        //m_filePath="";
-        ui->editor->setPlainText(tr(""));
-        //ui->editor->document()->setModified(false);
-        ui->label->setText("");
-    }
 }
-
 
 
 void Widget::on_content_clicked()
@@ -656,7 +678,7 @@ void Widget::on_concentrated_clicked()
     ui->treeView->hide();
     ui->content->hide();
     ui->log->hide();
-    ui->dome->hide();
+    ui->demo->hide();
     ui->concentrated->setEnabled(false);
     ui->normal->setEnabled(true);
 
@@ -681,7 +703,7 @@ void Widget::on_normal_clicked()
     ui->treeView->show();
     ui->content->show();
     ui->log->show();
-    ui->dome->show();
+    ui->demo->show();
 
     ui->listView->show();
     ui->bold->show();
@@ -746,7 +768,7 @@ void Widget::on_heading_clicked()
 
 void Widget::on_code_clicked()
 {
-    ui->editor->insertPlainText(tr("`world`"));
+    ui->editor->insertPlainText(tr("```world```"));
     for(int i=0;i<6;i++)
     {
         ui->editor->moveCursor(QTextCursor::Left,QTextCursor::MoveAnchor);
@@ -767,5 +789,27 @@ void Widget::on_dividing_line_clicked()
 
 void Widget::on_quote_clicked()
 {
-    ui->editor->insertPlainText(">");
+    ui->editor->insertPlainText("> quote");
+}
+
+void Widget::on_demo_clicked()
+{
+    QString sourcePath = ":/template/";
+    QString targetPath = "./template/";
+
+    QDir targetFolder(targetPath);
+    if(!targetFolder.exists()){
+        targetFolder.mkpath(".");
+    }
+    QDir sourceFolder(sourcePath);
+    QStringList files = sourceFolder.entryList(QDir::Files);
+    foreach(QString file,files){
+        QFile::copy(sourcePath+file,targetPath+file);
+    }
+    this->changePath("./template");
+
+    QString currentPath = QDir::currentPath();
+    QString openPath = currentPath+"/template/demo-day.md";
+
+    this->openFile(openPath);
 }

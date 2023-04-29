@@ -2,8 +2,8 @@
 <html lang="en">
 <meta charset="utf-8">
 <head>
-  <link rel="stylesheet" type="text/css" href="3rdparty/markdown.css">
-  <link rel="stylesheet" type="text/css" href="3rdparty/default.min.css">
+  <link id="cssThemeFileId"  rel="stylesheet" type="text/css" href="3rdparty/vue.css">
+  <link id="cssCodeFileId"  rel="stylesheet" type="text/css" href="3rdparty/vs.min.css">
   <script src="3rdparty/marked.js"></script>
   <script src="3rdparty/highlight.min.js"></script>
 
@@ -16,13 +16,11 @@
   <script>
   'use strict';
 
-
-
   var placeholder = document.getElementById('placeholder');
 
   var updateText = function(text) {
       placeholder.innerHTML = marked(text);
-hljs.highlightAll();
+      hljs.highlightAll();
   }
 
   new QWebChannel(qt.webChannelTransport,

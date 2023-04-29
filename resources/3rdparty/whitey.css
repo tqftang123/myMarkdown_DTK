@@ -1,0 +1,180 @@
+html {
+	font-size: 19px;
+}
+
+html, body {
+/*	margin: auto;*/
+	background: #fefefe;
+	-webkit-font-smoothing: antialiased;
+}
+body {
+	font-family: "Vollkorn", Palatino, Times;
+	color: #333;
+	line-height: 1.4;
+	text-align: justify;
+/*        margin: 0 300px;*/
+        max-width: 960px;
+}
+
+#toc{
+    width: 20%;
+    overflow: auto;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    z-index: 100;
+    background-color:#f5f6f7;
+}
+#cataLog{
+    height: 800px;
+}
+#tocLi{
+    text-decoration:none;
+    list-style:none;
+    margin:10px;
+}
+#tocLi:hover{
+    background-color: #E7E5DC;
+}
+#tocid{
+    text-decoration: none;
+    font-size:18px;
+    font-weight: 500;
+    color:black;
+}
+#tocid:hover{
+    color: #fc5531;
+}
+#tocH{
+    color:black;
+}
+#theme{
+    width: 20%;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+}
+#contentDiv{
+    display:flex;
+    justify-content:center;
+}
+#placeholder{
+    width:75%;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+h1 {
+	font-size:3em;
+}
+
+h2 {
+	margin-top:2em;
+	font-weight: normal;
+}
+
+h3 {
+	font-weight: normal;
+	font-style: italic;
+	margin-top: 3em;
+}
+
+h1, 
+h2, 
+h3{
+	text-align: center;
+}
+
+h2:after{
+	border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+}
+
+h1+h2, h2+h3 {
+	margin-top: 0.83em;
+}
+
+p{
+	margin-top: 0;
+	-webkit-hypens: auto;
+	-moz-hypens: auto;
+	hyphens: auto;
+}
+ul {
+	list-style: square;
+	padding-left: 1.2em;
+}
+ol {
+	padding-left: 1.2em;
+}
+blockquote {
+	margin-left: 1em;
+	padding-left: 1em;
+	border-left: 1px solid #ddd;
+}
+code,
+pre {
+	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+	font-size: .9em;
+	background: white;
+}
+a {
+	color: #2484c1;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img {
+	border: none;
+}
+h1 a,
+h1 a:hover {
+	color: #333;
+	text-decoration: none;
+}
+hr {
+	color: #ddd;
+	height: 1px;
+	margin: 2em 0;
+	border-top: solid 1px #ddd;
+	border-bottom: none;
+	border-left: 0;
+	border-right: 0;
+}
+table {
+        margin-bottom: 1.333333rem;
+        width:100%;
+}
+table th,
+table td {
+	padding: 8px;
+	line-height: 1.333333rem;
+	vertical-align: top;
+	border-top: 1px solid #ddd
+}
+table th {
+	font-weight: bold
+}
+table thead th {
+	vertical-align: bottom
+}
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 0
+}
+table tbody+tbody {
+	border-top: 2px solid #ddd
+}

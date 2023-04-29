@@ -92,7 +92,7 @@ void MainWindow::initMenu()
 
             ////////
             menu = titlebar->menu()->addMenu("同步");
-            connect(menu->addAction("设置github仓库路径"), &QAction::triggered, this, [=](){
+            connect(menu->addAction("设置远程仓库路径"), &QAction::triggered, this, [=](){
 
                 this->url = QInputDialog::getText(this,
                                                              "QInputdialog_Name",
@@ -139,94 +139,119 @@ void MainWindow::initMenu()
 
             connect(menu->addAction("下载"), &QAction::triggered, this, [=](){
 
-                // 执行git pull命令，将本地仓库与远程仓库同步
-                QProcess process;
+                QMessageBox msgBox;
+                msgBox.setText("提示：");
+                msgBox.setInformativeText("确认下载:"+url+"该仓库地址内容？");
+                msgBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+                msgBox.setDefaultButton(QMessageBox::Ok);
+                int ret = msgBox.exec();
+                if(ret == QMessageBox::Ok){
+                    //...
+                    // 执行git pull命令，将本地仓库与远程仓库同步
+                    QProcess process;
 
-                /////// 进入指定文件夹
-                    //QDir::setCurrent("./testGit");
-                QString str = this->url;
-                QStringList list = str.split(QRegExp("[/\\\\]"));
-                QString repoName = list.last().remove(".git");
-                qDebug() << repoName;
+                    /////// 进入指定文件夹
+                        //QDir::setCurrent("./testGit");
+                    QString str = this->url;
+                    QStringList list = str.split(QRegExp("[/\\\\]"));
+                    QString repoName = list.last().remove(".git");
+                    qDebug() << repoName;
 
-                QDir::setCurrent("./"+repoName);
-                process.start("git pull");
-                process.waitForFinished(-1);
+                    QDir::setCurrent("./"+repoName);
+                    process.start("git pull");
+                    process.waitForFinished(-1);
 
-            // 检查git pull命令是否执行成功
-                if (process.exitCode() != 0)
-                {
-                    //m_statusLabel->setText(tr("Failed to sync to local."));
-                    QMessageBox::warning(this,tr("失败"),tr("同步到本地失败！"));
+                // 检查git pull命令是否执行成功
+                    if (process.exitCode() != 0)
+                    {
+                        //m_statusLabel->setText(tr("Failed to sync to local."));
+                        QMessageBox::warning(this,tr("失败"),tr("同步到本地失败！"));
+                    }
+                    else {
+                        QMessageBox::warning(this,tr("成功"),tr("同步到本地成功！"));
+                        //m_statusLabel->setText(tr("Successfully synced to local."));
+                    }
+
                 }
-                else {
-                    QMessageBox::warning(this,tr("成功"),tr("同步到本地成功！"));
-                    //m_statusLabel->setText(tr("Successfully synced to local."));
-                }
 
+
+                if(ret == QMessageBox::Cancel){
+
+                }
 
             });
 
 
             connect(menu->addAction("上传"), &QAction::triggered, this, [=](){
 
+                QMessageBox msgBox;
+                msgBox.setText("提示：");
+                msgBox.setInformativeText("确认上传到:"+url+"远程仓库？");
+                msgBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+                msgBox.setDefaultButton(QMessageBox::Ok);
+                int ret = msgBox.exec();
+                if(ret == QMessageBox::Ok){
 
-                // 执行git add命令，将本地文件添加到暂存区
-                QProcess process;
+                    // 执行git add命令，将本地文件添加到暂存区
+                    QProcess process;
 
-                /////// 进入指定文件夹
-                    QString str = this->url;
-                    QStringList list = str.split(QRegExp("[/\\\\]"));
-                    QString repoName = list.last().remove(".git");
-                    qDebug() << repoName;
-                    QDir::setCurrent("./"+repoName);
+                    /////// 进入指定文件夹
+                        QString str = this->url;
+                        QStringList list = str.split(QRegExp("[/\\\\]"));
+                        QString repoName = list.last().remove(".git");
+                        qDebug() << repoName;
+                        QDir::setCurrent("./"+repoName);
 
-                process.start("git add .");  // 添加所有文件到暂存区
-                process.waitForFinished(-1);
-
-                // 检查git add命令是否执行成功
-                if (process.exitCode() != 0)
-                {
-                    QMessageBox::warning(this,tr("失败"),tr("添加文件到仓库失败！"));
-                    //m_statusLabel->setText(tr("Failed to add files."));
-
-                }
-                else {
-                    // 执行git commit命令，提交更改到本地仓库
-                    process.start("git commit -m \"Sync changes\"");
+                    process.start("git add .");  // 添加所有文件到暂存区
                     process.waitForFinished(-1);
 
-                    // 检查git commit命令是否执行成功
+                    // 检查git add命令是否执行成功
                     if (process.exitCode() != 0)
                     {
-                        QMessageBox::warning(this,tr("失败"),tr("提交文件到仓库失败！"));
-                        //m_statusLabel->setText(tr("Failed to commit changes."));
+                        QMessageBox::warning(this,tr("失败"),tr("添加文件到仓库失败！"));
+                        //m_statusLabel->setText(tr("Failed to add files."));
+
                     }
                     else {
-                        // 执行git push命令，将本地仓库的更改推送到远程仓库
-                        process.start("git push");
-
+                        // 执行git commit命令，提交更改到本地仓库
+                        process.start("git commit -m \"Sync changes\"");
                         process.waitForFinished(-1);
 
-                        // 检查git push命令是否执行成功
+                        // 检查git commit命令是否执行成功
                         if (process.exitCode() != 0)
                         {
-                            QMessageBox::warning(this,tr("失败"),tr("上传到远程失败！"));
-                            //m_statusLabel->setText(tr("Failed to push changes."));
+                            QMessageBox::warning(this,tr("失败"),tr("提交文件到仓库失败！"));
+                            //m_statusLabel->setText(tr("Failed to commit changes."));
                         }
-
                         else {
-                            QMessageBox::warning(this,tr("成功"),tr("上传到远程成功！"));
-                            //m_statusLabel->setText(tr("Successfully synced to remote."));
+                            // 执行git push命令，将本地仓库的更改推送到远程仓库
+                            process.start("git push");
+
+                            process.waitForFinished(-1);
+
+                            // 检查git push命令是否执行成功
+                            if (process.exitCode() != 0)
+                            {
+                                QMessageBox::warning(this,tr("失败"),tr("上传到远程失败！"));
+                                //m_statusLabel->setText(tr("Failed to push changes."));
+                            }
+
+                            else {
+                                QMessageBox::warning(this,tr("成功"),tr("上传到远程成功！"));
+                                //m_statusLabel->setText(tr("Successfully synced to remote."));
+                            }
+
                         }
 
                     }
 
                 }
 
+                if(ret == QMessageBox::Cancel){
+
+                }
 
             });
-
 
             //titlebar->menu()->addAction("markdown指南");
             connect(titlebar->menu()->addAction("markdown指南"), &QAction::triggered, this, [&](){
@@ -250,7 +275,7 @@ w->changePath(path);
             //titlebar->menu()->addAction("关于");
             connect(titlebar->menu()->addAction("关于"), &QAction::triggered, this, [&](){
                 QString dlgTitle = "关于对话框";
-                QString strInfo = "该项目为markdown文本编辑器，开发小组成员有：";
+                QString strInfo = "该项目为markdown文本编辑器，开发小组成员有：杨东、胡露、唐琴凤。若您在使用中遇到如何问题，欢迎联系我们。邮箱：2805952976@qq.com";
                 QMessageBox::about(this,dlgTitle,strInfo);
 
             });

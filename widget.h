@@ -89,8 +89,6 @@ private slots:
     //listview
     void slotClicked(const QModelIndex &index);
 
-    //模板库
-    void on_dome_clicked();
     //关闭当前打开的文件
     void on_close_clicked();
 
@@ -113,6 +111,9 @@ private slots:
 
     void on_quote_clicked();
 
+    //模板库
+    void on_demo_clicked();
+
 private:
     Ui::Widget *ui;
     QString m_filePath;
@@ -126,6 +127,49 @@ private:
 //当前目录的文件夹路径
 QString path;
 
+};
+
+class MyDirModel :public QDirModel{
+public:
+    //目录显示为文件名
+    QVariant headerData(int section,Qt::Orientation orientation,int role = Qt::DisplayRole) const{
+        if(role == Qt::DisplayRole && orientation == Qt::Horizontal){
+            if(section == 0){
+                return QString("文件名");
+            }
+        }
+        return QDirModel::headerData(section,orientation,role);
+    }
+
+    //使目录结构只显示文件名那一列
+    int columnCount(const QModelIndex &parent = QModelIndex()) const{
+        Q_UNUSED(parent);
+        return 1;
+    }
+    QVariant data(const QModelIndex &index,int role = Qt::DisplayRole) const{
+        //处理图标
+        if(role == Qt::DecorationRole){
+            if(index.column() == 0){
+                QFileInfo fileInfo = this->fileInfo(index);
+                if(fileInfo.isFile()){
+                    QFileIconProvider iconProvider;
+                    return iconProvider.icon(QFileIconProvider::File);
+                }
+                else if (fileInfo.isDir()) {
+                    QFileIconProvider iconProvider;
+                    return iconProvider.icon(QFileIconProvider::Folder);
+                }
+            }
+        }
+
+        if(role != Qt::DisplayRole && role != Qt::ToolTipRole){
+            return QVariant();
+        }
+        if(index.column() != 0){
+            return QVariant();
+        }
+        return QDirModel::data(index,Qt::DisplayRole);
+    }
 };
 
 #endif // WIDGET_H
