@@ -114,6 +114,8 @@ private slots:
     //模板库
     void on_demo_clicked();
 
+    void on_log_clicked();
+
 private:
     Ui::Widget *ui;
     QString m_filePath;
@@ -126,6 +128,9 @@ private:
     QString m_fileName;
 //当前目录的文件夹路径
 QString path;
+
+public:
+QString url2;
 
 };
 

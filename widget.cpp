@@ -21,6 +21,9 @@ Widget::Widget(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //////////
+    ui->log_2->hide();
+
 //如果我需要编辑和预览一左一右到话
 //QSplitter可调节两个窗口的大小
 //QSplitter *splitter=new QSplitter(ui->horizontalWidget);
@@ -476,6 +479,10 @@ void Widget::edite()
 
  void Widget::changePath(QString path)
  {
+     ui->log_2->hide();
+     ui->treeView->show();
+
+
       model = new MyDirModel();
 
       model->setFilter(QDir::Files | QDir::AllDirs | QDir::NoDotAndDotDot);
@@ -812,4 +819,39 @@ void Widget::on_demo_clicked()
     QString openPath = currentPath+"/template/demo-day.md";
 
     this->openFile(openPath);
+}
+
+void Widget::on_log_clicked()
+{
+ui->log_2->show();
+ui->treeView->hide();
+
+    // 执行git log命令，将本地仓库与远程仓库同步
+    QProcess process;
+
+    /////// 进入指定文件夹
+        //QDir::setCurrent("./testGit");
+    QString str = this->url2;
+    QStringList list = str.split(QRegExp("[/\\\\]"));
+    QString repoName = list.last().remove(".git");
+    qDebug() << repoName;
+
+    QDir::setCurrent("./"+repoName);
+    process.start("git log");
+    process.waitForFinished(-1);
+QString output(process.readAllStandardOutput());
+
+// 检查git pull命令是否执行成功
+    if (process.exitCode() != 0)
+    {
+        //m_statusLabel->setText(tr("Failed to sync to local."));
+        QMessageBox::warning(this,tr("失败"),tr("log失败！"));
+    }
+    else {
+//        QMessageBox::warning(this,tr("成功"),output);
+        //m_statusLabel->setText(tr("Successfully synced to local."));
+    }
+
+    ui->log_2->setText(output);
+
 }

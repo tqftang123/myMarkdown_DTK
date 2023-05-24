@@ -100,6 +100,11 @@ void MainWindow::initMenu()
                                                              QLineEdit::Normal,
                                                              "note"
                                                              );
+
+
+                ////////////
+                w->url2=this->url;
+
                 if(url!=nullptr)
                 {
                     // 执行git clone命令，将远程仓库克隆到本地
