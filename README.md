@@ -7,7 +7,8 @@ Markdown编辑器是一种文本编辑器，它允许用户使用简单的标记
 
 ## 二、界面介绍
 
-![](qrc:/images/ui.png)
+
+![](file:///home/rootroot/Downloads/TeamNote-6/build-TeamNote-unknown-Debug/myMarkdown_DTK/mk_images/Markdown_2023_05_24_17_12_59_ui.png)
 
 
 Markdown编辑器软件界面分为主界面、编辑区域和预览区域三个部分。主界面包括菜单栏，多文件菜单栏，工具栏，导航栏，和目录浏览区等核心功能，编辑区域用于输入文本，预览区域可查看渲染后的效果。
